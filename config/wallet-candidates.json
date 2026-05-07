@@ -1,0 +1,137 @@
+[
+  {
+    "address": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+    "label": "dune_pumpfun_profit_rank_1",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 1,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "niggerd597QYedtvjQDVHZTCCGyJrwHNm2i49dkm5zS",
+    "label": "dune_pumpfun_profit_rank_13",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 13,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "MRiYA4oN3158fCV8evhuCofrDzbHyYvYnGZUDJvoCsa",
+    "label": "dune_pumpfun_profit_rank_15",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 15,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+    "label": "dune_pumpfun_profit_rank_16",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 16,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+    "label": "dune_pumpfun_profit_rank_17",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 17,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "13H2M1C3w2pwr6oYf6ZKcPGNut6mQedRAFzCpMF2iGJK",
+    "label": "dune_pumpfun_profit_rank_18",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 18,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "2cxjRs8bt5EBxbcSJkY1AXLX5UCYq23pWn83EckDMdCv",
+    "label": "dune_pumpfun_profit_rank_19",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 19,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+    "label": "dune_pumpfun_profit_rank_20",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 20,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "4hSXPtxZgXFpo6Vxq9yqxNjcBoqWN3VoaPJWonUtupzD",
+    "label": "dune_pumpfun_profit_rank_21",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 21,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+    "label": "dune_pumpfun_profit_rank_22",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 22,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "9FNz4MjPUmnJqTf6yEDbL1D4SsHVh7uA8zRHhR5K138r",
+    "label": "dune_pumpfun_profit_rank_23",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 23,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "9ZzjXiwkGRDBwVHJitfx8AmnN2YUbnqW6M1tH38juEeJ",
+    "label": "dune_pumpfun_profit_rank_24",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 24,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "AJ6MGExeK7FXmeKkKPmALjcdXVStXYokYNv9uVfDRtvo",
+    "label": "dune_pumpfun_profit_rank_25",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 25,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "8QKeertKJ3PmVPRA6iFx87LMa5MnPZJThasJF4FyPKY1",
+    "label": "dune_pumpswap_volume_bot_filtered_rank_2",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 2,
+    "source": "Dune Pump.Fun Alpha Wallets BOT-filtered volume table",
+    "notes": "Candidate only until vet-wallets passes it."
+  },
+  {
+    "address": "dKMjeGJ4Mk9S3hxdfTThvZ7exks2xMwWqSM5NvN2CTK",
+    "label": "dune_pumpswap_volume_bot_filtered_rank_5",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 5,
+    "source": "Dune Pump.Fun Alpha Wallets BOT-filtered volume table",
+    "notes": "Candidate only until vet-wallets passes it."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "address": "SMART_WALLET_ADDRESS_1",
+    "label": "early_wallet_1",
+    "trust": 1.0,
+    "enabled": true
+  },
+  {
+    "address": "SMART_WALLET_ADDRESS_2",
+    "label": "early_wallet_2",
+    "trust": 1.0,
+    "enabled": true
+  }
+]

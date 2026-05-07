@@ -1,0 +1,32 @@
+{
+  "name": "memecoin-alpha-bot",
+  "version": "0.1.0",
+  "description": "Dry-run Solana memecoin alpha scanner inspired by thegreatola/memecoins-trading-agent. No live trading in v1.",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_NO_WARNINGS=1 tsx src/cli.ts run",
+    "scan:once": "NODE_NO_WARNINGS=1 tsx src/cli.ts scan-once",
+    "status": "NODE_NO_WARNINGS=1 tsx src/cli.ts status",
+    "report": "NODE_NO_WARNINGS=1 tsx src/cli.ts report",
+    "wallets": "NODE_NO_WARNINGS=1 tsx src/cli.ts wallets",
+    "add-wallet": "NODE_NO_WARNINGS=1 tsx src/cli.ts add-wallet",
+    "vet-wallets": "NODE_NO_WARNINGS=1 tsx src/walletEvaluator.ts",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.json",
+    "start": "NODE_NO_WARNINGS=1 node dist/cli.js run"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

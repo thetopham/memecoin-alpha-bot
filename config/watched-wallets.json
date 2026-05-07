@@ -1,0 +1,134 @@
+[
+  {
+    "address": "JA1XqoGSQDr8EtqDWRA374rbjpPyPhK4QYuyfdUku87B",
+    "label": "own_wallet_excluded_from_alpha",
+    "trust": 0,
+    "enabled": false,
+    "source": "user-confirmed-own-wallet",
+    "notes": "Disabled so the bot does not treat the user's own trades as alpha. Re-enable only if you intentionally want self-observation."
+  },
+  {
+    "address": "j1oeQoPeuEDmjvyMwBmCWexzCQup77kbKKxV59CnYbd",
+    "label": "dune_pumpfun_profit_rank_2",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "j1opmdubY84LUeidrPCsSGskTCYmeJVzds1UWm6nngb",
+    "label": "dune_pumpfun_profit_rank_3",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "label": "dune_pumpfun_profit_rank_4",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "7dGrdJRYtsNR8UYxZ3TnifXGjGc9eRYLq9sELwYpuuUu",
+    "label": "dune_pumpfun_profit_rank_5",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "DfMxre4cKmvogbLrPigxmibVTTQDuzjdXojWzjCXXhzj",
+    "label": "dune_pumpfun_profit_rank_6",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "54Pz1e35z9uoFdnxtzjp7xZQoFiofqhdayQWBMN7dsuy",
+    "label": "dune_pumpfun_profit_rank_7",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+    "label": "dune_pumpfun_profit_rank_8",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "73LnJ7G9ffBDjEBGgJDdgvLUhD5APLonKrNiHsKDCw5B",
+    "label": "dune_pumpfun_profit_rank_9",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "HdxkiXqeN6qpK2YbG51W23QSWj3Yygc1eEk2zwmKJExp",
+    "label": "dune_pumpfun_profit_rank_10",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "2ezv4U5HmPpkt2xLsKnw1FyyGmjFBeW7c166p99Hw2xB",
+    "label": "dune_pumpfun_profit_rank_11",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "56S29mZ3wqvw8hATuUUFqKhGcSGYFASRRFNT38W8q7G3",
+    "label": "dune_pumpfun_profit_rank_12",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
+    "label": "dune_pumpfun_profit_rank_14",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
+  },
+  {
+    "address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+    "label": "dune_pumpfun_profit_rank_16",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=17, distinct_buy_tokens=13, avg_buy_sol=0.152."
+  },
+  {
+    "address": "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+    "label": "dune_pumpfun_profit_rank_17",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=80/100, buys=18, distinct_buy_tokens=2, avg_buy_sol=0.474."
+  },
+  {
+    "address": "2cxjRs8bt5EBxbcSJkY1AXLX5UCYq23pWn83EckDMdCv",
+    "label": "dune_pumpfun_profit_rank_19",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=4, avg_buy_sol=1.358."
+  },
+  {
+    "address": "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+    "label": "dune_pumpfun_profit_rank_20",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=0.919."
+  },
+  {
+    "address": "9FNz4MjPUmnJqTf6yEDbL1D4SsHVh7uA8zRHhR5K138r",
+    "label": "dune_pumpfun_profit_rank_23",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=15, distinct_buy_tokens=7, avg_buy_sol=0.505."
+  }
+]
