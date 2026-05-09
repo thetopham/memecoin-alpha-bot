@@ -1,3 +1,5 @@
+import { AsyncRateLimiter, fetchWithTimeoutAndRetry } from './rateLimit';
+
 export interface CieloClientConfig {
   apiKey?: string;
   apiBaseUrl: string;
@@ -61,6 +63,8 @@ export interface CieloHttpResult<T = unknown> {
 }
 
 const DEFAULT_TIMEOUT_MS = 20_000;
+const cieloApiLimiter = new AsyncRateLimiter({ minIntervalMs: 125 }); // Cielo Free: 10 credits/sec; keep a buffer.
+const cieloAppLimiter = new AsyncRateLimiter({ minIntervalMs: 500 }); // Undocumented app tRPC fallback; keep conservative.
 
 export const CIELO_PULSE_PROTOCOLS = [
   'raydium-v4',
@@ -112,21 +116,22 @@ function responseMessage(payload: unknown): string | undefined {
   return typeof message === 'string' ? message : undefined;
 }
 
-async function fetchJson<T = unknown>(url: string, init: RequestInit, timeoutMs: number): Promise<CieloHttpResult<T>> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const response = await fetch(url, { ...init, signal: controller.signal });
-    const text = await response.text();
-    const data = text ? JSON.parse(text) as T : undefined as T;
-    if (!response.ok && response.status !== 202) {
-      const message = responseMessage(data) ?? response.statusText;
-      throw new Error(`Cielo request failed (${response.status}): ${message}`);
-    }
-    return { status: response.status, data };
-  } finally {
-    clearTimeout(timer);
+async function fetchJson<T = unknown>(url: string, init: RequestInit, timeoutMs: number, limiter: AsyncRateLimiter, context: string): Promise<CieloHttpResult<T>> {
+  const response = await fetchWithTimeoutAndRetry(url, init, {
+    context,
+    limiter,
+    timeoutMs,
+    maxRetries: 3,
+    retryBaseMs: 1_000,
+    retryMaxMs: 30_000,
+  });
+  const text = await response.text();
+  const data = text ? JSON.parse(text) as T : undefined as T;
+  if (!response.ok && response.status !== 202) {
+    const message = responseMessage(data) ?? response.statusText;
+    throw new Error(`Cielo request failed (${response.status}): ${message}`);
   }
+  return { status: response.status, data };
 }
 
 function unwrapApiPayload<T = unknown>(payload: unknown): T {
@@ -203,7 +208,7 @@ export class CieloClient {
           'x-api-key': this.apiKey,
           'user-agent': 'memecoin-alpha-bot/0.1 dry-run wallet-discovery',
         },
-      }, this.timeoutMs);
+      }, this.timeoutMs, cieloApiLimiter, `Cielo API ${pathname}`);
       if (result.status !== 202) return unwrapApiPayload<T>(result.data);
       if (attempt === retries) throw new Error(`Cielo API data still not ready after ${retries + 1} attempts: ${pathname}`);
       await sleep(10_000);
@@ -223,7 +228,7 @@ export class CieloClient {
         accept: 'application/json',
         'user-agent': 'memecoin-alpha-bot/0.1 dry-run wallet-discovery',
       },
-    }, this.timeoutMs);
+    }, this.timeoutMs, cieloAppLimiter, `Cielo app ${procedure}`);
     return unwrapTrpcPayload<T>(result.data);
   }
 

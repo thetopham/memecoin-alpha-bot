@@ -9,7 +9,7 @@ Concepts preserved in this build:
 - smart-wallet convergence: 2-5 watched wallets buying the same mint within minutes
 - score dimensions: volume, holders/distribution, dev/top-holder behavior, CT/momentum placeholder
 - hard skip when top-holder concentration is too high
-- staged exits at 2x/3x/5x and emergency exits on tracked-wallet selling
+- staged exits at 2x/3x/5x, configurable peak-drawdown trailing stop, and emergency exits on tracked-wallet selling
 - short Telegram alerts only for real signals/exits
 - trade history as feedback loop, but only after sufficient dry-run data
 

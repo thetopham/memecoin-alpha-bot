@@ -13,9 +13,11 @@
     "wallets": "NODE_NO_WARNINGS=1 tsx src/cli.ts wallets",
     "add-wallet": "NODE_NO_WARNINGS=1 tsx src/cli.ts add-wallet",
     "wallet-performance": "NODE_NO_WARNINGS=1 tsx src/cli.ts wallet-performance",
+    "wallet-maintenance": "NODE_NO_WARNINGS=1 tsx src/cli.ts wallet-maintenance",
     "discover-wallets": "NODE_NO_WARNINGS=1 tsx src/cieloWalletDiscovery.ts",
     "vet-wallets": "NODE_NO_WARNINGS=1 tsx src/walletEvaluator.ts",
     "test": "vitest run",
+    "lint": "tsc -p tsconfig.json --noEmit",
     "build": "tsc -p tsconfig.json",
     "start": "NODE_NO_WARNINGS=1 node dist/cli.js run"
   },

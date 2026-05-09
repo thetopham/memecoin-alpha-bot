@@ -1,5 +1,8 @@
 import type { AppConfig, ConvergenceSignal, PaperTrade, TokenScore } from './types';
 import { formatLiquidity, formatPct, formatUsd, shortAddress } from './utils';
+import { AsyncRateLimiter, fetchWithTimeoutAndRetry } from './rateLimit';
+
+const telegramLimiter = new AsyncRateLimiter({ minIntervalMs: 1_000 });
 
 export class Notifier {
   constructor(private readonly cfg: Pick<AppConfig, 'telegramBotToken' | 'telegramChatId'>) {}
@@ -9,7 +12,7 @@ export class Notifier {
       console.log(`\n[ALERT]\n${message}\n`);
       return;
     }
-    const res = await fetch(`https://api.telegram.org/bot${this.cfg.telegramBotToken}/sendMessage`, {
+    const res = await fetchWithTimeoutAndRetry(`https://api.telegram.org/bot${this.cfg.telegramBotToken}/sendMessage`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -17,6 +20,13 @@ export class Notifier {
         text: message,
         disable_web_page_preview: true,
       }),
+    }, {
+      context: 'Telegram sendMessage',
+      limiter: telegramLimiter,
+      timeoutMs: 10_000,
+      maxRetries: 3,
+      retryBaseMs: 1_000,
+      retryMaxMs: 30_000,
     });
     if (!res.ok) throw new Error(`Telegram send failed HTTP ${res.status}`);
   }

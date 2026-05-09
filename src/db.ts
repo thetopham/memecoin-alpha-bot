@@ -22,7 +22,9 @@ export class AlphaDb {
 
   private init(): void {
     this.db.exec(`
+      PRAGMA busy_timeout = 5000;
       PRAGMA journal_mode = WAL;
+      PRAGMA synchronous = NORMAL;
       CREATE TABLE IF NOT EXISTS state (
         key TEXT PRIMARY KEY,
         value TEXT NOT NULL,
@@ -56,6 +58,16 @@ export class AlphaDb {
         created_at INTEGER NOT NULL
       );
       CREATE INDEX IF NOT EXISTS idx_signals_token_time ON signals(token_address, created_at);
+      CREATE TABLE IF NOT EXISTS api_usage (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        provider TEXT NOT NULL,
+        endpoint TEXT NOT NULL,
+        credits REAL NOT NULL,
+        status TEXT NOT NULL,
+        created_at INTEGER NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS idx_api_usage_provider_time ON api_usage(provider, created_at);
+      CREATE INDEX IF NOT EXISTS idx_api_usage_time ON api_usage(created_at);
       CREATE TABLE IF NOT EXISTS paper_trades (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         token_address TEXT NOT NULL,
@@ -124,6 +136,39 @@ export class AlphaDb {
       INSERT INTO state(key, value, updated_at) VALUES (?, ?, ?)
       ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at
     `).run(key, value, now);
+  }
+
+  recordApiUsage(input: { provider: string; endpoint: string; credits?: number; status?: string; createdAt?: number }): void {
+    this.db.prepare(`
+      INSERT INTO api_usage(provider, endpoint, credits, status, created_at)
+      VALUES (?, ?, ?, ?, ?)
+    `).run(
+      input.provider,
+      input.endpoint,
+      Math.max(0, input.credits ?? 1),
+      input.status ?? 'ok',
+      input.createdAt ?? Math.floor(Date.now() / 1000),
+    );
+  }
+
+  apiUsageSince(provider: string, sinceSeconds: number): { requests: number; credits: number } {
+    const row = this.db.prepare(`
+      SELECT COUNT(*) AS requests, COALESCE(SUM(credits), 0) AS credits
+      FROM api_usage
+      WHERE provider = ? AND created_at >= ?
+    `).get(provider, sinceSeconds) as { requests?: number; credits?: number } | undefined;
+    return { requests: Number(row?.requests ?? 0), credits: Number(row?.credits ?? 0) };
+  }
+
+  apiUsageByProviderSince(sinceSeconds: number): Array<{ provider: string; requests: number; credits: number }> {
+    const rows = this.db.prepare(`
+      SELECT provider, COUNT(*) AS requests, COALESCE(SUM(credits), 0) AS credits
+      FROM api_usage
+      WHERE created_at >= ?
+      GROUP BY provider
+      ORDER BY credits DESC, requests DESC
+    `).all(sinceSeconds) as Array<{ provider: string; requests: number; credits: number }>;
+    return rows.map(row => ({ provider: row.provider, requests: Number(row.requests), credits: Number(row.credits) }));
   }
 
   insertEvent(event: WalletSwapEvent): boolean {

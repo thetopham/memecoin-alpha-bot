@@ -5,6 +5,20 @@ import { describe, expect, it } from 'vitest';
 import { AlphaDb } from '../src/db';
 
 describe('AlphaDb paper execution fields', () => {
+  it('configures a SQLite busy timeout so concurrent dashboard/status readers do not fail immediately', () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'memecoin-alpha-db-'));
+    const db = new AlphaDb(path.join(dir, 'alpha.sqlite'));
+
+    try {
+      const row = (db as any).db.prepare('PRAGMA busy_timeout').get() as Record<string, number>;
+      const timeoutMs = Number(Object.values(row)[0]);
+      expect(timeoutMs).toBeGreaterThanOrEqual(5_000);
+    } finally {
+      db.close();
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
   it('persists paper fill/slippage/timing metadata with a paper trade', () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'memecoin-alpha-db-'));
     const db = new AlphaDb(path.join(dir, 'alpha.sqlite'));

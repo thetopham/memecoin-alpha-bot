@@ -3,8 +3,18 @@ import type { AddressInfo } from 'net';
 import type { AppConfig, PaperTrade, WalletPerformance } from './types';
 import { AlphaDb } from './db';
 import { loadWallets } from './wallets';
-import { formatClosedPositions, formatOpenPositions, formatPaperPortfolioSummary, formatWalletPerformance, normalizeSignalReasonText } from './reportFormatter';
+import { formatClosedPositions, formatExitRules, formatOpenPositions, formatPaperPortfolioSummary, formatWalletPerformance, normalizeSignalReasonText } from './reportFormatter';
 import { nowSeconds, shortAddress } from './utils';
+
+export interface DashboardOpsCron {
+  name: string;
+  jobId: string;
+  schedule: string;
+  script: string;
+  purpose: string;
+  behavior: string;
+  tone: 'positive' | 'warning' | 'purple' | 'info';
+}
 
 export interface DashboardViewModel {
   generatedAt: number;
@@ -24,6 +34,9 @@ export interface DashboardViewModel {
   walletPerformance: WalletPerformance[];
   walletPerformanceText: string;
   recentSignals: string[];
+  paperExitRulesText: string;
+  opsCrons: DashboardOpsCron[];
+  dataSourceNote: string;
   refreshSeconds: number;
 }
 
@@ -31,7 +44,40 @@ export interface DashboardServerOptions {
   host?: string;
   port?: number;
   refreshSeconds?: number;
+  authToken?: string;
 }
+
+const DASHBOARD_DATA_SOURCE_NOTE = 'API-neutral: this dashboard reads local SQLite/watchlist state only. It does not call Helius, Cielo, DexScreener, pump.fun, or Solana RPC; live API work stays in the bot service or explicit --refresh commands.';
+
+const HERMES_OPS_CRONS: DashboardOpsCron[] = [
+  {
+    name: 'Bot Health Watchdog',
+    jobId: '2b59421d3551',
+    schedule: 'every 10m',
+    script: '~/.hermes/scripts/memecoin_bot_health_watchdog.py',
+    purpose: 'service/auth/API-budget/log watchdog',
+    behavior: 'silent-on-ok; alerts only when bot, dashboard, DB, auth, logs, disk, or budget look wrong',
+    tone: 'positive',
+  },
+  {
+    name: 'Position Manager',
+    jobId: 'f7822adb2503',
+    schedule: 'every 20m',
+    script: '~/.hermes/scripts/memecoin_position_manager.py',
+    purpose: 'paper open-position stale / near-stop / dormant checks',
+    behavior: 'cooldown-based alerts; no live exits, no swaps, no private-key path',
+    tone: 'warning',
+  },
+  {
+    name: 'Wallet Scanner / Maintainer',
+    jobId: 'bd525bf8d155',
+    schedule: '17 */6 * * *',
+    script: '~/.hermes/scripts/memecoin_wallet_scanner.py',
+    purpose: 'Cielo discovery plus wallet candidate add/rotation maintenance',
+    behavior: 'bounded candidate adds, atomic watchlist backups, reports each run because it can mutate config',
+    tone: 'purple',
+  },
+];
 
 export function buildDashboardViewModel(
   cfg: AppConfig,
@@ -46,6 +92,8 @@ export function buildDashboardViewModel(
     now: nowSeconds(),
     stopLossPercent: cfg.stopLossPercent,
     takeProfitMultiples: cfg.takeProfitMultiples,
+    paperTrailingStopActivationMultiple: cfg.paperTrailingStopActivationMultiple,
+    paperTrailingStopDrawdownPercent: cfg.paperTrailingStopDrawdownPercent,
   };
 
   const walletPerformance = db.walletPerformance(wallets, 8);
@@ -68,6 +116,9 @@ export function buildDashboardViewModel(
     walletPerformance,
     walletPerformanceText: formatWalletPerformance(walletPerformance, 8),
     recentSignals: formatRecentSignals(db.recentSignals(10)),
+    paperExitRulesText: formatExitRules(formatOptions),
+    opsCrons: HERMES_OPS_CRONS,
+    dataSourceNote: DASHBOARD_DATA_SOURCE_NOTE,
     refreshSeconds: options.refreshSeconds,
   };
 }
@@ -76,11 +127,20 @@ export async function startDashboardServer(cfg: AppConfig, options: DashboardSer
   const host = options.host ?? process.env.DASHBOARD_HOST ?? '127.0.0.1';
   const port = options.port ?? Number(process.env.DASHBOARD_PORT ?? 8788);
   const refreshSeconds = Math.max(5, options.refreshSeconds ?? Number(process.env.DASHBOARD_REFRESH_SECONDS ?? 15));
+  const authToken = options.authToken ?? cfg.dashboardAuthToken ?? process.env.DASHBOARD_AUTH_TOKEN?.trim();
+  const allowInsecure = ['1', 'true', 'yes', 'on'].includes(String(process.env.DASHBOARD_INSECURE ?? '').toLowerCase());
+  if (!authToken && !allowInsecure && !isLoopbackHost(host)) {
+    throw new Error('Dashboard refuses non-loopback bind without DASHBOARD_AUTH_TOKEN. Set token or bind to 127.0.0.1.');
+  }
   const db = new AlphaDb(cfg.dbPath);
 
   const server = http.createServer((req, res) => {
     try {
       const url = new URL(req.url ?? '/', `http://${req.headers.host ?? 'localhost'}`);
+      if (authToken && !isDashboardRequestAuthorized(req, authToken)) {
+        send(res, 401, 'text/plain; charset=utf-8', 'dashboard auth required');
+        return;
+      }
       if (url.pathname === '/api/dashboard') {
         const model = buildDashboardViewModel(cfg, db, { refreshSeconds });
         send(res, 200, 'application/json; charset=utf-8', JSON.stringify(model, null, 2));
@@ -105,10 +165,24 @@ export async function startDashboardServer(cfg: AppConfig, options: DashboardSer
       server.off('error', reject);
       const address = server.address() as AddressInfo;
       console.log(`Memecoin Alpha Dashboard listening on http://${address.address}:${address.port}`);
-      console.log('mode: PAPER / DRY RUN | read-only dashboard | no private keys | no swaps');
+      console.log(`mode: PAPER / DRY RUN | read-only dashboard | auth=${authToken ? 'required' : 'disabled'} | no private keys | no swaps`);
       resolve(server);
     });
   });
+}
+
+function isLoopbackHost(host: string): boolean {
+  const normalized = host.toLowerCase();
+  return normalized === 'localhost'
+    || normalized === '127.0.0.1'
+    || normalized === '::1'
+    || normalized === '[::1]';
+}
+
+function isDashboardRequestAuthorized(req: http.IncomingMessage, authToken: string): boolean {
+  const header = req.headers['x-dashboard-token'];
+  if (Array.isArray(header)) return header.includes(authToken);
+  return header === authToken;
 }
 
 export function renderDashboardPage(model: DashboardViewModel): string {
@@ -262,7 +336,13 @@ export function renderDashboardPage(model: DashboardViewModel): string {
     .wallet-reason { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.35; }
     .samples { display:flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
     .sample-chip { border-radius: 999px; padding: 5px 8px; font-size: 11px; color: #cbd5e1; background: rgba(255,255,255,0.055); border: 1px solid rgba(148,163,184,0.12); }
-    .signal-list { display:grid; gap: 10px; margin-top: 14px; }
+    .signal-list, .ops-grid { display:grid; gap: 10px; margin-top: 14px; }
+    .ops-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .ops-card { border: 1px solid var(--border); border-radius: 18px; padding: 14px; background: rgba(255,255,255,0.04); }
+    .ops-card.positive { border-color: rgba(34,197,94,0.26); }
+    .ops-card.warning { border-color: rgba(250,204,21,0.28); }
+    .ops-card.purple { border-color: rgba(139,92,246,0.28); }
+    .ops-meta { margin-top: 10px; display: grid; gap: 7px; color: var(--muted); font-size: 12px; line-height: 1.35; }
     .signal-card { padding: 12px; }
     .signal-main { display:flex; justify-content: space-between; gap: 10px; align-items:flex-start; font-weight: 850; line-height: 1.35; }
     .signal-meta { color: var(--muted); margin-top: 6px; font-size: 13px; line-height: 1.35; }
@@ -271,7 +351,7 @@ export function renderDashboardPage(model: DashboardViewModel): string {
     @media (max-width: 920px) {
       .dashboard-shell { padding: 14px; }
       .hero-metrics, .metric-grid, .portfolio-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .trade-grid, .wallet-grid { grid-template-columns: 1fr; }
+      .trade-grid, .wallet-grid, .ops-grid { grid-template-columns: 1fr; }
       .exec-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
     @media (max-width: 560px) {
@@ -325,8 +405,19 @@ export function renderDashboardPage(model: DashboardViewModel): string {
     <section class="section">
       <div class="section-head">
         <div>
+          <h2>Hermes Ops Automation</h2>
+          <div class="section-caption">${escapeHtml(model.dataSourceNote)}</div>
+        </div>
+        <span class="chip">${model.opsCrons.length} no-agent crons</span>
+      </div>
+      ${renderOpsCronGrid(model.opsCrons)}
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
           <h2>Open Trades</h2>
-          <div class="section-caption">Each card surfaces PnL, liquidity, execution estimate, $100 size check, and fill latency.</div>
+          <div class="section-caption">Each card surfaces PnL, liquidity, execution estimate, $100 size check, and fill latency. Exit rules: ${escapeHtml(model.paperExitRulesText)}.</div>
         </div>
         <span class="chip">${model.openPositions.length} open</span>
       </div>
@@ -388,6 +479,19 @@ function renderPortfolioStrip(text: string): string {
     })
     .join('');
   return `<div class="portfolio-strip">${cards || miniCard('Portfolio', 'No PnL yet', '')}</div>${note ? `<div class="portfolio-note">${escapeHtml(note.replace(/^note:\s*/i, ''))}</div>` : ''}`;
+}
+
+function renderOpsCronGrid(crons: DashboardOpsCron[]): string {
+  if (crons.length === 0) return '<div class="empty-state">No Hermes ops cron metadata configured.</div>';
+  return `<div class="ops-grid">${crons.map(cron => `<article class="ops-card ${cron.tone}">
+    <div class="signal-main"><span>${escapeHtml(cron.name)}</span><span class="signal-badge ${cron.tone}">${escapeHtml(cron.schedule)}</span></div>
+    <div class="ops-meta">
+      <div><strong>job:</strong> ${escapeHtml(cron.jobId)}</div>
+      <div><strong>script:</strong> ${escapeHtml(cron.script)}</div>
+      <div><strong>purpose:</strong> ${escapeHtml(cron.purpose)}</div>
+      <div><strong>behavior:</strong> ${escapeHtml(cron.behavior)}</div>
+    </div>
+  </article>`).join('')}</div>`;
 }
 
 function renderTradeGrid(trades: PaperTrade[], kind: 'open' | 'closed'): string {

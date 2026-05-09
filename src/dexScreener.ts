@@ -1,5 +1,15 @@
 import type { LiquidityStatus, MarketStage, TokenMarketSnapshot } from './types';
 import { toNumber } from './utils';
+import { AsyncRateLimiter, fetchWithTimeoutAndRetry } from './rateLimit';
+
+const dexScreenerLimiter = new AsyncRateLimiter({ minIntervalMs: 200 }); // 300 requests/minute documented tier.
+const pumpFunLimiter = new AsyncRateLimiter({ minIntervalMs: 500 }); // Undocumented; keep fallback traffic conservative.
+const MARKET_SNAPSHOT_CACHE_TTL_MS = 15_000;
+const marketSnapshotCache = new Map<string, { expiresAt: number; snapshot: TokenMarketSnapshot }>();
+
+function marketSnapshotCacheKey(tokenAddress: string, top10HolderPercent: number | null): string {
+  return `${tokenAddress}:${top10HolderPercent == null ? 'unknown-holders' : top10HolderPercent.toFixed(6)}`;
+}
 
 function liquidityStatus(rawLiquidityUsd: unknown, liquidityUsd: number): LiquidityStatus {
   if (liquidityUsd > 0) return 'available';
@@ -59,15 +69,22 @@ function estimateWindowTransactions(total: unknown, ageMinutes: number | null, w
   return Math.round(estimateWindowValue(toNumber(total, 0), ageMinutes, windowMinutes));
 }
 
-async function fetchJsonOrNull(url: string): Promise<any | null> {
+async function fetchJsonOrNull(url: string, context = 'HTTP fallback'): Promise<any | null> {
   try {
-    const res = await fetch(url, {
+    const res = await fetchWithTimeoutAndRetry(url, {
       headers: {
         accept: 'application/json, text/plain, */*',
         origin: 'https://pump.fun',
         referer: 'https://pump.fun/',
         'user-agent': 'memecoin-alpha-bot/0.1',
       },
+    }, {
+      context,
+      limiter: pumpFunLimiter,
+      timeoutMs: 10_000,
+      maxRetries: 2,
+      retryBaseMs: 1_000,
+      retryMaxMs: 10_000,
     });
     if (!res.ok) return null;
     return await res.json();
@@ -78,8 +95,8 @@ async function fetchJsonOrNull(url: string): Promise<any | null> {
 
 async function getPumpFunSnapshot(tokenAddress: string, top10HolderPercent: number | null): Promise<TokenMarketSnapshot | null> {
   const mint = encodeURIComponent(tokenAddress);
-  const coin = await fetchJsonOrNull(`https://frontend-api-v3.pump.fun/coins/${mint}?sync=true`);
-  const metadata = await fetchJsonOrNull(`https://advanced-api-v2.pump.fun/coins/metadata/${mint}`);
+  const coin = await fetchJsonOrNull(`https://frontend-api-v3.pump.fun/coins/${mint}?sync=true`, 'pump.fun coin snapshot');
+  const metadata = await fetchJsonOrNull(`https://advanced-api-v2.pump.fun/coins/metadata/${mint}`, 'pump.fun metadata snapshot');
   if (!coin && !metadata) return null;
 
   const supply = normalizedSupply(coin, metadata);
@@ -124,10 +141,31 @@ async function getPumpFunSnapshot(tokenAddress: string, top10HolderPercent: numb
 
 export class DexScreenerClient {
   async getBestSnapshot(tokenAddress: string, top10HolderPercent: number | null = null): Promise<TokenMarketSnapshot | null> {
+    const cacheKey = marketSnapshotCacheKey(tokenAddress, top10HolderPercent);
+    const cached = marketSnapshotCache.get(cacheKey);
+    if (cached && cached.expiresAt > Date.now()) return cached.snapshot;
+
+    const snapshot = await this.fetchBestSnapshot(tokenAddress, top10HolderPercent);
+    if (snapshot) {
+      marketSnapshotCache.set(cacheKey, { expiresAt: Date.now() + MARKET_SNAPSHOT_CACHE_TTL_MS, snapshot });
+    }
+    return snapshot;
+  }
+
+  private async fetchBestSnapshot(tokenAddress: string, top10HolderPercent: number | null): Promise<TokenMarketSnapshot | null> {
     const url = `https://api.dexscreener.com/latest/dex/tokens/${encodeURIComponent(tokenAddress)}`;
     let data: any;
     try {
-      const res = await fetch(url, { headers: { accept: 'application/json' } });
+      const res = await fetchWithTimeoutAndRetry(url, {
+        headers: { accept: 'application/json' },
+      }, {
+        context: 'DexScreener token snapshot',
+        limiter: dexScreenerLimiter,
+        timeoutMs: 10_000,
+        maxRetries: 3,
+        retryBaseMs: 1_000,
+        retryMaxMs: 10_000,
+      });
       if (!res.ok) throw new Error(`DexScreener HTTP ${res.status}`);
       data = await res.json() as any;
     } catch (err) {

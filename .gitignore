@@ -2,6 +2,7 @@ node_modules/
 dist/
 data/*.sqlite
 data/*.sqlite-*
+config/.wallet-backups/
 .env
 .env.*
 !.env.example

@@ -11,7 +11,16 @@ export class PaperTrader {
 
   constructor(
     private readonly db: AlphaDb,
-    private readonly cfg: Pick<AppConfig, 'maxPaperPositionSol' | 'paperSolUsdForEstimates' | 'paperComparisonNotionalUsd' | 'stopLossPercent' | 'takeProfitMultiples' | 'signalWindowSeconds'>,
+    private readonly cfg: Pick<AppConfig,
+      'maxPaperPositionSol'
+      | 'paperSolUsdForEstimates'
+      | 'paperComparisonNotionalUsd'
+      | 'stopLossPercent'
+      | 'takeProfitMultiples'
+      | 'paperTrailingStopActivationMultiple'
+      | 'paperTrailingStopDrawdownPercent'
+      | 'signalWindowSeconds'
+    >,
     private readonly notifier: Notifier,
   ) {}
 
@@ -79,9 +88,37 @@ export class PaperTrader {
       checkedAt,
     });
 
+    if (this.shouldTrailStop(maxMultiplier, multiplier)) {
+      const reason = this.trailingStopReason(maxMultiplier, multiplier);
+      this.db.closeTrade(trade.tokenAddress, snapshot.priceUsd, checkedAt, pnlPercent, reason);
+      await this.notifier.exit({ ...trade, maxMultiplier }, reason, pnlPercent);
+      return;
+    }
+
     if (pnlPercent <= this.cfg.stopLossPercent) {
       this.db.closeTrade(trade.tokenAddress, snapshot.priceUsd, checkedAt, pnlPercent, `stop loss ${this.cfg.stopLossPercent}%`);
       await this.notifier.exit({ ...trade, maxMultiplier }, `stop loss ${this.cfg.stopLossPercent}%`, pnlPercent);
     }
   }
+
+  private shouldTrailStop(maxMultiplier: number, multiplier: number): boolean {
+    const drawdownPercent = this.trailingDrawdownPercent(maxMultiplier, multiplier);
+    return this.cfg.paperTrailingStopDrawdownPercent > 0
+      && maxMultiplier >= this.cfg.paperTrailingStopActivationMultiple
+      && drawdownPercent >= this.cfg.paperTrailingStopDrawdownPercent;
+  }
+
+  private trailingStopReason(maxMultiplier: number, multiplier: number): string {
+    const drawdownPercent = this.trailingDrawdownPercent(maxMultiplier, multiplier);
+    return `trailing stop ${formatReasonPercent(this.cfg.paperTrailingStopDrawdownPercent)} peak drawdown (peak ${maxMultiplier.toFixed(2)}x → current ${multiplier.toFixed(2)}x, drawdown -${drawdownPercent.toFixed(1)}%)`;
+  }
+
+  private trailingDrawdownPercent(maxMultiplier: number, multiplier: number): number {
+    if (maxMultiplier <= 0) return 0;
+    return Math.max(0, (1 - multiplier / maxMultiplier) * 100);
+  }
+}
+
+function formatReasonPercent(value: number): string {
+  return Math.abs(value - Math.round(value)) < 0.05 ? `${Math.round(value)}%` : `${value.toFixed(1)}%`;
 }

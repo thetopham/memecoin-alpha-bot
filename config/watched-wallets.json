@@ -1,311 +1,12 @@
 [
   {
-    "address": "JA1XqoGSQDr8EtqDWRA374rbjpPyPhK4QYuyfdUku87B",
-    "label": "own_wallet_excluded_from_alpha",
-    "trust": 0,
-    "enabled": false,
-    "source": "user-confirmed-own-wallet",
-    "notes": "Disabled so the bot does not treat the user's own trades as alpha. Re-enable only if you intentionally want self-observation."
-  },
-  {
-    "address": "j1oeQoPeuEDmjvyMwBmCWexzCQup77kbKKxV59CnYbd",
-    "label": "dune_pumpfun_profit_rank_2",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "j1opmdubY84LUeidrPCsSGskTCYmeJVzds1UWm6nngb",
-    "label": "dune_pumpfun_profit_rank_3",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
-    "label": "dune_pumpfun_profit_rank_4",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "7dGrdJRYtsNR8UYxZ3TnifXGjGc9eRYLq9sELwYpuuUu",
-    "label": "dune_pumpfun_profit_rank_5",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "DfMxre4cKmvogbLrPigxmibVTTQDuzjdXojWzjCXXhzj",
-    "label": "dune_pumpfun_profit_rank_6",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "54Pz1e35z9uoFdnxtzjp7xZQoFiofqhdayQWBMN7dsuy",
-    "label": "dune_pumpfun_profit_rank_7",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
-    "label": "dune_pumpfun_profit_rank_8",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "73LnJ7G9ffBDjEBGgJDdgvLUhD5APLonKrNiHsKDCw5B",
-    "label": "dune_pumpfun_profit_rank_9",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "HdxkiXqeN6qpK2YbG51W23QSWj3Yygc1eEk2zwmKJExp",
-    "label": "dune_pumpfun_profit_rank_10",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "2ezv4U5HmPpkt2xLsKnw1FyyGmjFBeW7c166p99Hw2xB",
-    "label": "dune_pumpfun_profit_rank_11",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "56S29mZ3wqvw8hATuUUFqKhGcSGYFASRRFNT38W8q7G3",
-    "label": "dune_pumpfun_profit_rank_12",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
-    "label": "dune_pumpfun_profit_rank_14",
-    "trust": 0.6,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table"
-  },
-  {
-    "address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
-    "label": "dune_pumpfun_profit_rank_16",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
-    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=17, distinct_buy_tokens=13, avg_buy_sol=0.152."
-  },
-  {
-    "address": "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
-    "label": "dune_pumpfun_profit_rank_17",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
-    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=80/100, buys=18, distinct_buy_tokens=2, avg_buy_sol=0.474."
-  },
-  {
-    "address": "2cxjRs8bt5EBxbcSJkY1AXLX5UCYq23pWn83EckDMdCv",
-    "label": "dune_pumpfun_profit_rank_19",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
-    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=4, avg_buy_sol=1.358."
-  },
-  {
-    "address": "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
-    "label": "dune_pumpfun_profit_rank_20",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
-    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=0.919."
-  },
-  {
-    "address": "9FNz4MjPUmnJqTf6yEDbL1D4SsHVh7uA8zRHhR5K138r",
-    "label": "dune_pumpfun_profit_rank_23",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
-    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=15, distinct_buy_tokens=7, avg_buy_sol=0.505."
-  },
-  {
     "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
     "label": "cielo_list_8137_c21r6y",
     "trust": 0.55,
     "enabled": true,
     "source": "Cielo Public List Feed (SOYLANA Traders)",
-    "notes": "Added by vet-wallets 2026-05-08T19:18:21.045Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=9, avg_buy_sol=2.359."
-  },
-  {
-    "address": "BNnN2MqfWLvgThYBsv6v8JQaYZXYKYahC5YCy27Ct1cX",
-    "label": "dune_dev2020_solana_alpha_rank_26",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=7, avg_buy_sol=1.403."
-  },
-  {
-    "address": "BfqvqsBXWbD7D9w9SRiKnst6Rhofgtb5Dr4wGprL57Gp",
-    "label": "dune_dev2020_solana_alpha_rank_28",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=90/100, buys=27, distinct_buy_tokens=3, avg_buy_sol=4.134."
-  },
-  {
-    "address": "12xfu174SRvgp2RFq5M9AvvQnPrDqJQNrPcnWbFd4Phf",
-    "label": "dune_dev2020_solana_alpha_rank_33",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.794."
-  },
-  {
-    "address": "ADXWGeh5jhNSMbt3R1Hnr8R9fi4amAgJyc5oudSWQNJu",
-    "label": "dune_dev2020_solana_alpha_rank_34",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=3.287."
-  },
-  {
-    "address": "4jSmEmBkuBi1JxZHM1khkf57xPR2oW1EnkRxqehq1cSK",
-    "label": "dune_dev2020_solana_alpha_rank_35",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=12, distinct_buy_tokens=10, avg_buy_sol=1.451."
-  },
-  {
-    "address": "BQm74qyqiUMRBkyxgLV5TRSaerTJqPxKB3Spa4tscPTN",
-    "label": "dune_dev2020_solana_alpha_rank_36",
-    "trust": 0.5,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=3.354."
-  },
-  {
-    "address": "FP1CLVYwpxYJAtE3vEyASi54pEPGzcobReJbwRSTUn3P",
-    "label": "dune_dev2020_solana_alpha_rank_40",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=49.114."
-  },
-  {
-    "address": "3gXrmvpjxZtPm5erFznwSFPDwsbcMGji3oxsvFBXZJQb",
-    "label": "dune_dev2020_solana_alpha_rank_47",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=83/100, buys=6, distinct_buy_tokens=2, avg_buy_sol=3.340."
-  },
-  {
-    "address": "DmFSDGKv5H5Bu2t9C3qYFkKaAcAUyWmf7J34H6wLA5rY",
-    "label": "dune_dev2020_solana_alpha_rank_50",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune dev2020/solana-alphas visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=14, distinct_buy_tokens=11, avg_buy_sol=1.125."
-  },
-  {
-    "address": "7QsRjSy9hiWYnEwSaWKjDcV4Zik1VJSCYt89amPsL6gB",
-    "label": "dune_couldbebasic_top_trader_rank_1",
-    "trust": 0.5,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=75/100, buys=20, distinct_buy_tokens=2, avg_buy_sol=6.402."
-  },
-  {
-    "address": "6vZdEjUCvAXNcVCyVBUTvZKDVf6ENmnXGS6oe3feoAo4",
-    "label": "dune_couldbebasic_top_trader_rank_2",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=25, distinct_buy_tokens=15, avg_buy_sol=1.358."
-  },
-  {
-    "address": "RDftc8wN9o4tqF9KMfho6YaUrsAVSst3h2n12QtJ4RM",
-    "label": "dune_couldbebasic_top_trader_rank_5",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=90/100, buys=11, distinct_buy_tokens=9, avg_buy_sol=1.321."
-  },
-  {
-    "address": "2znoHTryV4W8ZqK9rU9Ecy2f6s7EVU6osrifQAryahcJ",
-    "label": "dune_couldbebasic_top_trader_rank_8",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.053."
-  },
-  {
-    "address": "HPjovxKqpZWHyDJSK6oAJ2TqbNH3QrUgNhWn3WHyu4ip",
-    "label": "dune_couldbebasic_top_trader_rank_11",
-    "trust": 0.5,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=1.401."
-  },
-  {
-    "address": "jcya6XKeSNp26N2bjfoBy8AvFaWV9Ns2YyUhqWZH36F",
-    "label": "dune_couldbebasic_top_trader_rank_13",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=5.790."
-  },
-  {
-    "address": "69TEHviEqXZd2q4njbGnuyFuEAuz4JNCrDGFEehkGs48",
-    "label": "dune_couldbebasic_top_trader_rank_18",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.405."
-  },
-  {
-    "address": "71XNkYoJBnTePLPRZkQLQBihr3ReZ5SGPRwTsgdehMza",
-    "label": "dune_couldbebasic_top_trader_rank_19",
-    "trust": 0.5,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=77/100, buys=4, distinct_buy_tokens=3, avg_buy_sol=1.024."
-  },
-  {
-    "address": "57oTC6SmmNe2HwF9HTUzrNjBaEJzEomzp3iCaCbAGKBJ",
-    "label": "dune_couldbebasic_top_trader_rank_21",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=8, avg_buy_sol=2.001."
-  },
-  {
-    "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
-    "label": "dune_couldbebasic_top_trader_rank_23",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=13, distinct_buy_tokens=3, avg_buy_sol=6.077."
-  },
-  {
-    "address": "7Koj63CwUxq9CNPcSqirteQD8izDqyg7t2uUx2B5Ckv1",
-    "label": "dune_couldbebasic_top_trader_rank_24",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune couldbebasic/top-traders visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=85/100, buys=9, distinct_buy_tokens=6, avg_buy_sol=0.928."
-  },
-  {
-    "address": "7ES7vcS9vPg2ALkuK8d9gEZnhu7j4bYyWKJ3wLXoobrY",
-    "label": "dune_adam_pumpfun_alpha_rank_2",
-    "trust": 0.55,
-    "enabled": true,
-    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=80/100, buys=9, distinct_buy_tokens=3, avg_buy_sol=0.145."
+    "notes": "Added by vet-wallets 2026-05-08T19:18:21.045Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=9, avg_buy_sol=2.359.",
+    "tier": "hot"
   },
   {
     "address": "4XnHZZmHwSQ8RszJsdc7snvxG8dZtm6g4hvpkCMkguMx",
@@ -313,22 +14,937 @@
     "trust": 0.55,
     "enabled": true,
     "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=7, avg_buy_sol=0.103."
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=7, avg_buy_sol=0.103.",
+    "tier": "hot"
+  },
+  {
+    "address": "7ES7vcS9vPg2ALkuK8d9gEZnhu7j4bYyWKJ3wLXoobrY",
+    "label": "dune_adam_pumpfun_alpha_rank_2",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=80/100, buys=9, distinct_buy_tokens=3, avg_buy_sol=0.145.",
+    "tier": "hot"
+  },
+  {
+    "address": "7QsRjSy9hiWYnEwSaWKjDcV4Zik1VJSCYt89amPsL6gB",
+    "label": "dune_couldbebasic_top_trader_rank_1",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=75/100, buys=20, distinct_buy_tokens=2, avg_buy_sol=6.402.",
+    "tier": "hot"
+  },
+  {
+    "address": "HPjovxKqpZWHyDJSK6oAJ2TqbNH3QrUgNhWn3WHyu4ip",
+    "label": "dune_couldbebasic_top_trader_rank_11",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=1.401.",
+    "tier": "hot"
+  },
+  {
+    "address": "jcya6XKeSNp26N2bjfoBy8AvFaWV9Ns2YyUhqWZH36F",
+    "label": "dune_couldbebasic_top_trader_rank_13",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=5.790.",
+    "tier": "hot"
+  },
+  {
+    "address": "69TEHviEqXZd2q4njbGnuyFuEAuz4JNCrDGFEehkGs48",
+    "label": "dune_couldbebasic_top_trader_rank_18",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.405.",
+    "tier": "hot"
+  },
+  {
+    "address": "71XNkYoJBnTePLPRZkQLQBihr3ReZ5SGPRwTsgdehMza",
+    "label": "dune_couldbebasic_top_trader_rank_19",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=77/100, buys=4, distinct_buy_tokens=3, avg_buy_sol=1.024.",
+    "tier": "hot"
+  },
+  {
+    "address": "6vZdEjUCvAXNcVCyVBUTvZKDVf6ENmnXGS6oe3feoAo4",
+    "label": "dune_couldbebasic_top_trader_rank_2",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=25, distinct_buy_tokens=15, avg_buy_sol=1.358.",
+    "tier": "hot"
+  },
+  {
+    "address": "57oTC6SmmNe2HwF9HTUzrNjBaEJzEomzp3iCaCbAGKBJ",
+    "label": "dune_couldbebasic_top_trader_rank_21",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=8, avg_buy_sol=2.001.",
+    "tier": "hot"
+  },
+  {
+    "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+    "label": "dune_couldbebasic_top_trader_rank_23",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=13, distinct_buy_tokens=3, avg_buy_sol=6.077.",
+    "tier": "hot"
+  },
+  {
+    "address": "7Koj63CwUxq9CNPcSqirteQD8izDqyg7t2uUx2B5Ckv1",
+    "label": "dune_couldbebasic_top_trader_rank_24",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=85/100, buys=9, distinct_buy_tokens=6, avg_buy_sol=0.928.",
+    "tier": "hot"
+  },
+  {
+    "address": "RDftc8wN9o4tqF9KMfho6YaUrsAVSst3h2n12QtJ4RM",
+    "label": "dune_couldbebasic_top_trader_rank_5",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=90/100, buys=11, distinct_buy_tokens=9, avg_buy_sol=1.321.",
+    "tier": "hot"
+  },
+  {
+    "address": "2znoHTryV4W8ZqK9rU9Ecy2f6s7EVU6osrifQAryahcJ",
+    "label": "dune_couldbebasic_top_trader_rank_8",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.053.",
+    "tier": "hot"
+  },
+  {
+    "address": "BNnN2MqfWLvgThYBsv6v8JQaYZXYKYahC5YCy27Ct1cX",
+    "label": "dune_dev2020_solana_alpha_rank_26",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=7, avg_buy_sol=1.403.",
+    "tier": "hot"
+  },
+  {
+    "address": "BfqvqsBXWbD7D9w9SRiKnst6Rhofgtb5Dr4wGprL57Gp",
+    "label": "dune_dev2020_solana_alpha_rank_28",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=90/100, buys=27, distinct_buy_tokens=3, avg_buy_sol=4.134.",
+    "tier": "hot"
+  },
+  {
+    "address": "12xfu174SRvgp2RFq5M9AvvQnPrDqJQNrPcnWbFd4Phf",
+    "label": "dune_dev2020_solana_alpha_rank_33",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.794.",
+    "tier": "hot"
+  },
+  {
+    "address": "ADXWGeh5jhNSMbt3R1Hnr8R9fi4amAgJyc5oudSWQNJu",
+    "label": "dune_dev2020_solana_alpha_rank_34",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=3.287.",
+    "tier": "hot"
+  },
+  {
+    "address": "4jSmEmBkuBi1JxZHM1khkf57xPR2oW1EnkRxqehq1cSK",
+    "label": "dune_dev2020_solana_alpha_rank_35",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=12, distinct_buy_tokens=10, avg_buy_sol=1.451.",
+    "tier": "hot"
+  },
+  {
+    "address": "BQm74qyqiUMRBkyxgLV5TRSaerTJqPxKB3Spa4tscPTN",
+    "label": "dune_dev2020_solana_alpha_rank_36",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=3.354.",
+    "tier": "hot"
+  },
+  {
+    "address": "FP1CLVYwpxYJAtE3vEyASi54pEPGzcobReJbwRSTUn3P",
+    "label": "dune_dev2020_solana_alpha_rank_40",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=49.114.",
+    "tier": "hot"
+  },
+  {
+    "address": "3gXrmvpjxZtPm5erFznwSFPDwsbcMGji3oxsvFBXZJQb",
+    "label": "dune_dev2020_solana_alpha_rank_47",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=83/100, buys=6, distinct_buy_tokens=2, avg_buy_sol=3.340.",
+    "tier": "hot"
+  },
+  {
+    "address": "DmFSDGKv5H5Bu2t9C3qYFkKaAcAUyWmf7J34H6wLA5rY",
+    "label": "dune_dev2020_solana_alpha_rank_50",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=14, distinct_buy_tokens=11, avg_buy_sol=1.125.",
+    "tier": "hot"
+  },
+  {
+    "address": "HdxkiXqeN6qpK2YbG51W23QSWj3Yygc1eEk2zwmKJExp",
+    "label": "dune_pumpfun_profit_rank_10",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "hot"
+  },
+  {
+    "address": "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+    "label": "dune_pumpfun_profit_rank_17",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=80/100, buys=18, distinct_buy_tokens=2, avg_buy_sol=0.474.",
+    "tier": "hot"
+  },
+  {
+    "address": "2cxjRs8bt5EBxbcSJkY1AXLX5UCYq23pWn83EckDMdCv",
+    "label": "dune_pumpfun_profit_rank_19",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=4, avg_buy_sol=1.358.",
+    "tier": "hot"
+  },
+  {
+    "address": "j1oeQoPeuEDmjvyMwBmCWexzCQup77kbKKxV59CnYbd",
+    "label": "dune_pumpfun_profit_rank_2",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "hot"
+  },
+  {
+    "address": "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+    "label": "dune_pumpfun_profit_rank_20",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=0.919.",
+    "tier": "hot"
+  },
+  {
+    "address": "9FNz4MjPUmnJqTf6yEDbL1D4SsHVh7uA8zRHhR5K138r",
+    "label": "dune_pumpfun_profit_rank_23",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=15, distinct_buy_tokens=7, avg_buy_sol=0.505.",
+    "tier": "hot"
+  },
+  {
+    "address": "j1opmdubY84LUeidrPCsSGskTCYmeJVzds1UWm6nngb",
+    "label": "dune_pumpfun_profit_rank_3",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "hot"
+  },
+  {
+    "address": "7dGrdJRYtsNR8UYxZ3TnifXGjGc9eRYLq9sELwYpuuUu",
+    "label": "dune_pumpfun_profit_rank_5",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "hot"
+  },
+  {
+    "address": "54Pz1e35z9uoFdnxtzjp7xZQoFiofqhdayQWBMN7dsuy",
+    "label": "dune_pumpfun_profit_rank_7",
+    "trust": 0.6,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "hot"
+  },
+  {
+    "address": "JA1XqoGSQDr8EtqDWRA374rbjpPyPhK4QYuyfdUku87B",
+    "label": "own_wallet_excluded_from_alpha",
+    "trust": 0,
+    "enabled": false,
+    "source": "user-confirmed-own-wallet",
+    "notes": "Disabled so the bot does not treat the user's own trades as alpha. Re-enable only if you intentionally want self-observation.",
+    "tier": "hot"
   },
   {
     "address": "BTf4A2exGK9BCVDNzy65b9dUzXgMqB4weVkvTMFQsadd",
     "label": "dune_adam_pumpfun_alpha_rank_65",
-    "trust": 0.55,
+    "trust": 0.1,
     "enabled": true,
     "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=95/100, buys=13, distinct_buy_tokens=8, avg_buy_sol=2.519."
+    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=95/100, buys=13, distinct_buy_tokens=8, avg_buy_sol=2.519.",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
   },
   {
     "address": "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
     "label": "dune_adam_pumpfun_alpha_rank_67",
-    "trust": 0.55,
+    "trust": 0.3,
     "enabled": true,
     "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
-    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=90/100, buys=26, distinct_buy_tokens=7, avg_buy_sol=0.357."
+    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=90/100, buys=26, distinct_buy_tokens=7, avg_buy_sol=0.357.",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "2ezv4U5HmPpkt2xLsKnw1FyyGmjFBeW7c166p99Hw2xB",
+    "label": "dune_pumpfun_profit_rank_11",
+    "trust": 0.35,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "56S29mZ3wqvw8hATuUUFqKhGcSGYFASRRFNT38W8q7G3",
+    "label": "dune_pumpfun_profit_rank_12",
+    "trust": 0.35,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
+    "label": "dune_pumpfun_profit_rank_14",
+    "trust": 0.35,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+    "label": "dune_pumpfun_profit_rank_16",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=17, distinct_buy_tokens=13, avg_buy_sol=0.152.",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "label": "dune_pumpfun_profit_rank_4",
+    "trust": 0.15,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "DfMxre4cKmvogbLrPigxmibVTTQDuzjdXojWzjCXXhzj",
+    "label": "dune_pumpfun_profit_rank_6",
+    "trust": 0.1,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "73LnJ7G9ffBDjEBGgJDdgvLUhD5APLonKrNiHsKDCw5B",
+    "label": "dune_pumpfun_profit_rank_9",
+    "trust": 0.15,
+    "enabled": true,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "probation",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z"
+  },
+  {
+    "address": "DmLwEaKoJnFt83D8N3xafcsw2aycmyddk7V9JrjvDF2e",
+    "label": "cielo_discovery_trending_rank_1",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 1,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=94/100. cielo wallet discovery performance threshold passed Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 94,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 789.0742889914304,
+        "roi1d": 199.53670604224442,
+        "pnl7dUsd": 3149.2870271835964,
+        "roi7d": 140.68577449197932,
+        "pnl30dUsd": 6389.827558427536,
+        "roi30d": 68.08749085374599,
+        "maxPnlUsd": 6389.827558427536,
+        "maxRoi": 199.53670604224442,
+        "winrate": 52.77777777777778,
+        "lastActiveHours": 3.752227500014835,
+        "averageHoldSeconds": 484545,
+        "nativeBalance": 33.714894971,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.020Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "4BAFULjCCKmhiWXVehs9J3c4UDdZSia7MGo49nWNS4xj",
+    "label": "cielo_discovery_trending_rank_12",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 12,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=84/100. cielo wallet discovery performance threshold passed Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 84,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 333.8642346870189,
+        "roi1d": 29.94576125650592,
+        "pnl7dUsd": 3365.126214556167,
+        "roi7d": 74.84197178910757,
+        "pnl30dUsd": 4270.85202294655,
+        "roi30d": 30.499688764880094,
+        "maxPnlUsd": 4270.85202294655,
+        "maxRoi": 74.84197178910757,
+        "winrate": 45,
+        "lastActiveHours": 4.008061944444974,
+        "averageHoldSeconds": 3678,
+        "nativeBalance": 40.576781675,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "A9AUUyaWHU4SF53DKckruAZQyHaWMCvbvGGYHwAyYnSR",
+    "label": "cielo_discovery_trending_rank_13",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 13,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=88/100. cielo wallet discovery performance threshold passed Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 88,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1014.9745797834191,
+        "roi1d": 27.236367708380747,
+        "pnl7dUsd": 4378.512329840339,
+        "roi7d": 30.267175890943594,
+        "pnl30dUsd": 30997.761761393584,
+        "roi30d": 53.50222915083507,
+        "maxPnlUsd": 30997.761761393584,
+        "maxRoi": 53.50222915083507,
+        "winrate": 55.81395348837209,
+        "lastActiveHours": 14.565006388889419,
+        "averageHoldSeconds": 78130,
+        "nativeBalance": 116.795608419,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "2xhpcw1oBh2U4WnYzPSMxrxk8PsiG6zMBk7jRbtPMayM",
+    "label": "cielo_discovery_trending_rank_18",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 18,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=84/100. trading bot label=axiom Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 84,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=axiom"
+      ],
+      "metrics": {
+        "pnl1dUsd": 405.5448801370003,
+        "roi1d": 22.2896222129614,
+        "pnl7dUsd": 3625.8163101586097,
+        "roi7d": 56.09583931779659,
+        "pnl30dUsd": 13004.58635526906,
+        "roi30d": 30.2761206744006,
+        "maxPnlUsd": 13004.58635526906,
+        "maxRoi": 56.09583931779659,
+        "winrate": 63.41463414634146,
+        "lastActiveHours": 2.022228611111641,
+        "averageHoldSeconds": 2842,
+        "nativeBalance": 42.999582896,
+        "nativeSymbol": "SOL",
+        "tags": []
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "CdzyHHftkbHWgm6jhcGVseJQVjYYwTpDY3FrbW3cYHE3",
+    "label": "cielo_discovery_trending_rank_2",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 2,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=88/100. trading bot label=gmgn Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 88,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=gmgn"
+      ],
+      "metrics": {
+        "pnl1dUsd": 579.8799939847188,
+        "roi1d": 165.9115075778566,
+        "pnl7dUsd": 3460.632733322715,
+        "roi7d": 135.8192310773493,
+        "pnl30dUsd": 5192.364831501769,
+        "roi30d": 97.319158028074,
+        "maxPnlUsd": 5192.364831501769,
+        "maxRoi": 165.9115075778566,
+        "winrate": 68,
+        "lastActiveHours": 10.381949999994703,
+        "averageHoldSeconds": 310577,
+        "nativeBalance": 38.829060571,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "EmBSWkPNHSLuTYCRKsLrA5HaYcH2WW5DhA3SqEsZDZkk",
+    "label": "cielo_discovery_trending_rank_3",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 3,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=94/100. trading bot label=padre Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 94,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=padre"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1912.240333543789,
+        "roi1d": 110.09481091150985,
+        "pnl7dUsd": 8263.4187169485,
+        "roi7d": 80.31558113489314,
+        "pnl30dUsd": 16390.997453786018,
+        "roi30d": 67.56368869535443,
+        "maxPnlUsd": 16390.997453786018,
+        "maxRoi": 110.09481091150985,
+        "winrate": 60,
+        "lastActiveHours": 0.262505833307902,
+        "averageHoldSeconds": 549,
+        "nativeBalance": 168.933896183,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "9tnrKoBGKBeAWgbjAF7cGsaJNuDgUovydc2k785hviBF",
+    "label": "cielo_discovery_trending_rank_4",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 4,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=80/100. trading bot label=photon Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 80,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=photon"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1629.4243746492944,
+        "roi1d": 106.72069679819205,
+        "pnl7dUsd": 17402.71830387403,
+        "roi7d": 26.55484835917826,
+        "pnl30dUsd": 27132.810476387505,
+        "roi30d": 16.968996025008572,
+        "maxPnlUsd": 27132.810476387505,
+        "maxRoi": 106.72069679819205,
+        "winrate": 47.43589743589743,
+        "lastActiveHours": 10.606950277752347,
+        "averageHoldSeconds": 7185,
+        "nativeBalance": 45.102297859,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "ALJ4P5QNyHeLEjpKGmA1eUfJHSEGQMjY8HLnDkSgjczb",
+    "label": "cielo_discovery_trending_rank_8",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 8,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=86/100. trading bot label=axiom Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 86,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=axiom"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1672.6555302291881,
+        "roi1d": 63.008886424932086,
+        "pnl7dUsd": 11143.11040482482,
+        "roi7d": 78.19494522312459,
+        "pnl30dUsd": 90545.92263703303,
+        "roi30d": 50.74811526378697,
+        "maxPnlUsd": 90545.92263703303,
+        "maxRoi": 78.19494522312459,
+        "winrate": 56.52173913043478,
+        "lastActiveHours": 1.501116944419013,
+        "averageHoldSeconds": 335,
+        "nativeBalance": 64.515930679,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "2RssnB7hcrnBEx55hXMKT1E7gN27g9ecQFbbCc5Zjajq",
+    "label": "cielo_list_36875_2rssnb",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (Solana High Winrate 90%)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:41.032Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "CNudZYFgpbT26fidsiNrWfHeGTBMMeVWqruZXsEkcUPc",
+    "label": "cielo_list_36875_cnudzy",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 54,
+      "sources": [
+        "Cielo Public List Feed (Solana High Winrate 90%)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 3,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:41.032Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "2XyQF5q5EWdaGCH8ZfLjiVpvbpLXz8D78T9MzUpNEGBL",
+    "label": "cielo_list_8137_2xyqf5",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+    "label": "cielo_list_8137_4be9cv",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 54,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 3,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "8HeDT75s5g4CtCimH5B5nySqCiQhtWii8UnZhxBtFo38",
+    "label": "cielo_list_8137_8hedt7",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 62,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 74,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "9H7nQxF1vmrr9fjcE55Y9RoTb1uhKtE7934y8Ww8oijr",
+    "label": "cielo_list_8137_9h7nqx",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "9jyqFiLnruggwNn4EQwBNFXwpbLM9hrA4hV59ytyAVVz",
+    "label": "cielo_list_8137_9jyqfi",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 62,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 17,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T18:18:09.000Z",
+    "lastTierChangeAt": "2026-05-09T18:18:09.000Z"
+  },
+  {
+    "address": "CPydqKcEEeKTR6wt3L15G8S5Ea4bxjS2vvjiW9vw1UwK",
+    "label": "cielo_list_8137_cpydqk",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "EMp115dQaDGcMnogrB8FnxBc9XF6AZAq4QJ9wFK5utFB",
+    "label": "cielo_list_8137_emp115",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes Auto-added as slow-scan candidate; promote only after paper performance proves useful.",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    },
+    "tier": "candidate",
+    "addedAt": "2026-05-09T16:38:44.000Z",
+    "lastTierChangeAt": "2026-05-09T16:38:44.000Z"
+  },
+  {
+    "address": "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+    "label": "dune_pumpfun_profit_rank_8",
+    "trust": 0.55,
+    "enabled": false,
+    "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
+    "tier": "archive",
+    "lastTierChangeAt": "2026-05-09T20:18:45.000Z",
+    "notes": "Archived by wallet rotation: persistent closed losses with weak win rate",
+    "archivedAt": "2026-05-09T19:18:36.000Z"
   }
 ]

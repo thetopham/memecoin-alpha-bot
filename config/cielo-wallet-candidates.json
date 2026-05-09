@@ -1,7 +1,309 @@
 [
   {
-    "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
-    "label": "cielo_list_8137_c21r6y",
+    "address": "DmLwEaKoJnFt83D8N3xafcsw2aycmyddk7V9JrjvDF2e",
+    "label": "cielo_discovery_trending_rank_1",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 1,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=94/100. cielo wallet discovery performance threshold passed",
+    "cielo": {
+      "score": 94,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 789.0742889914304,
+        "roi1d": 199.53670604224442,
+        "pnl7dUsd": 3149.2870271835964,
+        "roi7d": 140.68577449197932,
+        "pnl30dUsd": 6389.827558427536,
+        "roi30d": 68.08749085374599,
+        "maxPnlUsd": 6389.827558427536,
+        "maxRoi": 199.53670604224442,
+        "winrate": 52.77777777777778,
+        "lastActiveHours": 3.752227500014835,
+        "averageHoldSeconds": 484545,
+        "nativeBalance": 33.714894971,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.020Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "EmBSWkPNHSLuTYCRKsLrA5HaYcH2WW5DhA3SqEsZDZkk",
+    "label": "cielo_discovery_trending_rank_3",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 3,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=94/100. trading bot label=padre",
+    "cielo": {
+      "score": 94,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=padre"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1912.240333543789,
+        "roi1d": 110.09481091150985,
+        "pnl7dUsd": 8263.4187169485,
+        "roi7d": 80.31558113489314,
+        "pnl30dUsd": 16390.997453786018,
+        "roi30d": 67.56368869535443,
+        "maxPnlUsd": 16390.997453786018,
+        "maxRoi": 110.09481091150985,
+        "winrate": 60,
+        "lastActiveHours": 0.262505833307902,
+        "averageHoldSeconds": 549,
+        "nativeBalance": 168.933896183,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "A9AUUyaWHU4SF53DKckruAZQyHaWMCvbvGGYHwAyYnSR",
+    "label": "cielo_discovery_trending_rank_13",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 13,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=88/100. cielo wallet discovery performance threshold passed",
+    "cielo": {
+      "score": 88,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1014.9745797834191,
+        "roi1d": 27.236367708380747,
+        "pnl7dUsd": 4378.512329840339,
+        "roi7d": 30.267175890943594,
+        "pnl30dUsd": 30997.761761393584,
+        "roi30d": 53.50222915083507,
+        "maxPnlUsd": 30997.761761393584,
+        "maxRoi": 53.50222915083507,
+        "winrate": 55.81395348837209,
+        "lastActiveHours": 14.565006388889419,
+        "averageHoldSeconds": 78130,
+        "nativeBalance": 116.795608419,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "CdzyHHftkbHWgm6jhcGVseJQVjYYwTpDY3FrbW3cYHE3",
+    "label": "cielo_discovery_trending_rank_2",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 2,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=88/100. trading bot label=gmgn",
+    "cielo": {
+      "score": 88,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=gmgn"
+      ],
+      "metrics": {
+        "pnl1dUsd": 579.8799939847188,
+        "roi1d": 165.9115075778566,
+        "pnl7dUsd": 3460.632733322715,
+        "roi7d": 135.8192310773493,
+        "pnl30dUsd": 5192.364831501769,
+        "roi30d": 97.319158028074,
+        "maxPnlUsd": 5192.364831501769,
+        "maxRoi": 165.9115075778566,
+        "winrate": 68,
+        "lastActiveHours": 10.381949999994703,
+        "averageHoldSeconds": 310577,
+        "nativeBalance": 38.829060571,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "ALJ4P5QNyHeLEjpKGmA1eUfJHSEGQMjY8HLnDkSgjczb",
+    "label": "cielo_discovery_trending_rank_8",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 8,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=86/100. trading bot label=axiom",
+    "cielo": {
+      "score": 86,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=axiom"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1672.6555302291881,
+        "roi1d": 63.008886424932086,
+        "pnl7dUsd": 11143.11040482482,
+        "roi7d": 78.19494522312459,
+        "pnl30dUsd": 90545.92263703303,
+        "roi30d": 50.74811526378697,
+        "maxPnlUsd": 90545.92263703303,
+        "maxRoi": 78.19494522312459,
+        "winrate": 56.52173913043478,
+        "lastActiveHours": 1.501116944419013,
+        "averageHoldSeconds": 335,
+        "nativeBalance": 64.515930679,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "2xhpcw1oBh2U4WnYzPSMxrxk8PsiG6zMBk7jRbtPMayM",
+    "label": "cielo_discovery_trending_rank_18",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 18,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=84/100. trading bot label=axiom",
+    "cielo": {
+      "score": 84,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=axiom"
+      ],
+      "metrics": {
+        "pnl1dUsd": 405.5448801370003,
+        "roi1d": 22.2896222129614,
+        "pnl7dUsd": 3625.8163101586097,
+        "roi7d": 56.09583931779659,
+        "pnl30dUsd": 13004.58635526906,
+        "roi30d": 30.2761206744006,
+        "maxPnlUsd": 13004.58635526906,
+        "maxRoi": 56.09583931779659,
+        "winrate": 63.41463414634146,
+        "lastActiveHours": 2.022228611111641,
+        "averageHoldSeconds": 2842,
+        "nativeBalance": 42.999582896,
+        "nativeSymbol": "SOL",
+        "tags": []
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "4BAFULjCCKmhiWXVehs9J3c4UDdZSia7MGo49nWNS4xj",
+    "label": "cielo_discovery_trending_rank_12",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 12,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=84/100. cielo wallet discovery performance threshold passed",
+    "cielo": {
+      "score": 84,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "cielo wallet discovery performance threshold passed"
+      ],
+      "metrics": {
+        "pnl1dUsd": 333.8642346870189,
+        "roi1d": 29.94576125650592,
+        "pnl7dUsd": 3365.126214556167,
+        "roi7d": 74.84197178910757,
+        "pnl30dUsd": 4270.85202294655,
+        "roi30d": 30.499688764880094,
+        "maxPnlUsd": 4270.85202294655,
+        "maxRoi": 74.84197178910757,
+        "winrate": 45,
+        "lastActiveHours": 4.008061944444974,
+        "averageHoldSeconds": 3678,
+        "nativeBalance": 40.576781675,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.023Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "9tnrKoBGKBeAWgbjAF7cGsaJNuDgUovydc2k785hviBF",
+    "label": "cielo_discovery_trending_rank_4",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 4,
+    "source": "Cielo Wallet Discovery (trending, Solana)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=80/100. trading bot label=photon",
+    "cielo": {
+      "score": 80,
+      "sources": [
+        "Cielo Wallet Discovery (trending, Solana)"
+      ],
+      "reasons": [
+        "trading bot label=photon"
+      ],
+      "metrics": {
+        "pnl1dUsd": 1629.4243746492944,
+        "roi1d": 106.72069679819205,
+        "pnl7dUsd": 17402.71830387403,
+        "roi7d": 26.55484835917826,
+        "pnl30dUsd": 27132.810476387505,
+        "roi30d": 16.968996025008572,
+        "maxPnlUsd": 27132.810476387505,
+        "maxRoi": 106.72069679819205,
+        "winrate": 47.43589743589743,
+        "lastActiveHours": 10.606950277752347,
+        "averageHoldSeconds": 7185,
+        "nativeBalance": 45.102297859,
+        "nativeSymbol": "SOL",
+        "tags": [
+          "human_operated"
+        ]
+      },
+      "discoveredAt": "2026-05-09T18:18:01.021Z"
+    },
+    "tier": "hot"
+  },
+  {
+    "address": "8HeDT75s5g4CtCimH5B5nySqCiQhtWii8UnZhxBtFo38",
+    "label": "cielo_list_8137_8hedt7",
     "trust": 0.3,
     "enabled": true,
     "source": "Cielo Public List Feed (SOYLANA Traders)",
@@ -15,23 +317,24 @@
         "observed in Cielo feed; not proof of skill until RPC vetting passes"
       ],
       "metrics": {
-        "feedEvents": 27,
+        "feedEvents": 74,
         "distinctTokens": 0,
         "maxUsd": 0,
         "totalUsd": 0
       },
-      "discoveredAt": "2026-05-08T19:17:42.443Z"
-    }
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "hot"
   },
   {
-    "address": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
-    "label": "cielo_list_8137_4be9cv",
+    "address": "9jyqFiLnruggwNn4EQwBNFXwpbLM9hrA4hV59ytyAVVz",
+    "label": "cielo_list_8137_9jyqfi",
     "trust": 0.3,
     "enabled": true,
     "source": "Cielo Public List Feed (SOYLANA Traders)",
-    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
     "cielo": {
-      "score": 54,
+      "score": 62,
       "sources": [
         "Cielo Public List Feed (SOYLANA Traders)"
       ],
@@ -39,65 +342,18 @@
         "observed in Cielo feed; not proof of skill until RPC vetting passes"
       ],
       "metrics": {
-        "feedEvents": 3,
+        "feedEvents": 17,
         "distinctTokens": 0,
         "maxUsd": 0,
         "totalUsd": 0
       },
-      "discoveredAt": "2026-05-08T19:17:42.442Z"
-    }
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "hot"
   },
   {
-    "address": "CNudZYFgpbT26fidsiNrWfHeGTBMMeVWqruZXsEkcUPc",
-    "label": "cielo_list_36875_cnudzy",
-    "trust": 0.3,
-    "enabled": true,
-    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
-    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
-    "cielo": {
-      "score": 54,
-      "sources": [
-        "Cielo Public List Feed (Solana High Winrate 90%)"
-      ],
-      "reasons": [
-        "observed in Cielo feed; not proof of skill until RPC vetting passes"
-      ],
-      "metrics": {
-        "feedEvents": 3,
-        "distinctTokens": 0,
-        "maxUsd": 0,
-        "totalUsd": 0
-      },
-      "discoveredAt": "2026-05-08T19:17:41.032Z"
-    }
-  },
-  {
-    "address": "2RssnB7hcrnBEx55hXMKT1E7gN27g9ecQFbbCc5Zjajq",
-    "label": "cielo_list_36875_2rssnb",
-    "trust": 0.3,
-    "enabled": true,
-    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
-    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
-    "cielo": {
-      "score": 50,
-      "sources": [
-        "Cielo Public List Feed (Solana High Winrate 90%)"
-      ],
-      "reasons": [
-        "observed in Cielo feed; not proof of skill until RPC vetting passes"
-      ],
-      "metrics": {
-        "feedEvents": 2,
-        "distinctTokens": 0,
-        "maxUsd": 0,
-        "totalUsd": 0
-      },
-      "discoveredAt": "2026-05-08T19:17:41.032Z"
-    }
-  },
-  {
-    "address": "2XyQF5q5EWdaGCH8ZfLjiVpvbpLXz8D78T9MzUpNEGBL",
-    "label": "cielo_list_8137_2xyqf5",
+    "address": "9H7nQxF1vmrr9fjcE55Y9RoTb1uhKtE7934y8Ww8oijr",
+    "label": "cielo_list_8137_9h7nqx",
     "trust": 0.3,
     "enabled": true,
     "source": "Cielo Public List Feed (SOYLANA Traders)",
@@ -116,55 +372,8 @@
         "maxUsd": 0,
         "totalUsd": 0
       },
-      "discoveredAt": "2026-05-08T19:17:42.442Z"
-    }
-  },
-  {
-    "address": "CPydqKcEEeKTR6wt3L15G8S5Ea4bxjS2vvjiW9vw1UwK",
-    "label": "cielo_list_8137_cpydqk",
-    "trust": 0.3,
-    "enabled": true,
-    "source": "Cielo Public List Feed (SOYLANA Traders)",
-    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
-    "cielo": {
-      "score": 50,
-      "sources": [
-        "Cielo Public List Feed (SOYLANA Traders)"
-      ],
-      "reasons": [
-        "observed in Cielo feed; not proof of skill until RPC vetting passes"
-      ],
-      "metrics": {
-        "feedEvents": 2,
-        "distinctTokens": 0,
-        "maxUsd": 0,
-        "totalUsd": 0
-      },
-      "discoveredAt": "2026-05-08T19:17:42.442Z"
-    }
-  },
-  {
-    "address": "EMp115dQaDGcMnogrB8FnxBc9XF6AZAq4QJ9wFK5utFB",
-    "label": "cielo_list_8137_emp115",
-    "trust": 0.3,
-    "enabled": true,
-    "source": "Cielo Public List Feed (SOYLANA Traders)",
-    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
-    "cielo": {
-      "score": 50,
-      "sources": [
-        "Cielo Public List Feed (SOYLANA Traders)"
-      ],
-      "reasons": [
-        "observed in Cielo feed; not proof of skill until RPC vetting passes"
-      ],
-      "metrics": {
-        "feedEvents": 2,
-        "distinctTokens": 0,
-        "maxUsd": 0,
-        "totalUsd": 0
-      },
-      "discoveredAt": "2026-05-08T19:17:42.442Z"
-    }
+      "discoveredAt": "2026-05-09T18:18:03.257Z"
+    },
+    "tier": "hot"
   }
 ]

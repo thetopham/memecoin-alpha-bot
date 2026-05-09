@@ -42,6 +42,8 @@ export interface OpenPositionFormatOptions {
   now: number;
   stopLossPercent: number;
   takeProfitMultiples: number[];
+  paperTrailingStopActivationMultiple?: number;
+  paperTrailingStopDrawdownPercent?: number;
 }
 
 const TAKE_PROFIT_REMAINING = [80, 50, 20];
@@ -211,7 +213,7 @@ function formatOpenPosition(trade: PaperTrade, options: OpenPositionFormatOption
     ...formatExecutionLines(trade),
     `  ${current}`,
     `  ${peak}`,
-    `  exits: stop ${options.stopLossPercent.toFixed(1)}%; take-profits ${formatTakeProfits(options.takeProfitMultiples)}`,
+    `  exits: ${formatExitRules(options)}`,
     `  token: ${shortAddress(trade.tokenAddress)} | last check: ${lastCheck}`,
   ].join('\n');
 }
@@ -277,6 +279,16 @@ function multiplierFromPrice(trade: PaperTrade): number | null {
 function formatTakeProfits(multiples: number[]): string {
   if (multiples.length === 0) return 'none configured';
   return multiples.map((multiple, idx) => `${formatMultiple(multiple)}→${TAKE_PROFIT_REMAINING[idx] ?? 0}%`).join(', ');
+}
+
+export function formatExitRules(options: OpenPositionFormatOptions): string {
+  const parts = [`stop ${options.stopLossPercent.toFixed(1)}%`];
+  if ((options.paperTrailingStopDrawdownPercent ?? 0) > 0) {
+    const activation = options.paperTrailingStopActivationMultiple ?? 1;
+    parts.push(`trailing ${options.paperTrailingStopDrawdownPercent!.toFixed(1)}% from peak after ${activation.toFixed(2)}x`);
+  }
+  parts.push(`take-profits ${formatTakeProfits(options.takeProfitMultiples)}`);
+  return parts.join('; ');
 }
 
 function formatMultiple(value: number): string {

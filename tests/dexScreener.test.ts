@@ -42,6 +42,38 @@ describe('DexScreenerClient', () => {
     });
   });
 
+  it('does not reuse a cached snapshot with stale holder-concentration context', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        pairs: [
+          {
+            chainId: 'solana',
+            dexId: 'raydium',
+            pairAddress: 'PAIRCTX',
+            baseToken: { symbol: 'CTX', name: 'Cache Context' },
+            priceUsd: '0.00001',
+            liquidity: { usd: 10_000 },
+            volume: { h24: 50_000, h1: 4_000 },
+            txns: { m5: { buys: 4, sells: 2 }, h1: { buys: 40, sells: 20 } },
+            pairCreatedAt: Date.now() - 60 * 60_000,
+            marketCap: 10_000,
+            fdv: 10_000,
+          },
+        ],
+      }),
+    });
+    vi.stubGlobal('fetch', fetchMock);
+    const client = new DexScreenerClient();
+
+    const unknownHolderSnapshot = await client.getBestSnapshot('cacheContextMint', null);
+    const concentratedHolderSnapshot = await client.getBestSnapshot('cacheContextMint', 72.5);
+
+    expect(unknownHolderSnapshot?.top10HolderPercent).toBeNull();
+    expect(concentratedHolderSnapshot?.top10HolderPercent).toBe(72.5);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
   it('falls back to pump.fun native metadata when DexScreener has not indexed a pair yet', async () => {
     const fetchMock = vi.fn()
       .mockResolvedValueOnce({

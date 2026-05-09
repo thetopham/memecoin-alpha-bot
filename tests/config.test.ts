@@ -9,6 +9,22 @@ const ENV_KEYS = [
   'HELIUS_API_KEY',
   'SOLANA_RPC_URL',
   'HELIUS_WS_URL',
+  'HELIUS_MONTHLY_CREDITS',
+  'HELIUS_SOFT_DAILY_CREDITS',
+  'HELIUS_HARD_DAILY_CREDITS',
+  'ENABLE_API_BUDGET_GOVERNOR',
+  'HOT_WALLET_LIMIT',
+  'PROBATION_WALLET_LIMIT',
+  'CANDIDATE_WALLET_LIMIT',
+  'WALLET_CANDIDATE_AUTO_ADD_BATCH_LIMIT',
+  'HOT_WALLET_SCAN_INTERVAL_SECONDS',
+  'PROBATION_WALLET_SCAN_INTERVAL_SECONDS',
+  'CANDIDATE_WALLET_SCAN_INTERVAL_SECONDS',
+  'ENABLE_WALLET_AUTO_ROTATION',
+  'ENABLE_WALLET_CANDIDATE_AUTO_ADD',
+  'WALLET_ROTATION_INTERVAL_SECONDS',
+  'PAPER_TRAILING_STOP_ACTIVATION_MULTIPLE',
+  'PAPER_TRAILING_STOP_DRAWDOWN_PERCENT',
 ] as const;
 
 describe('loadConfig', () => {
@@ -28,16 +44,35 @@ describe('loadConfig', () => {
     expect(loadConfig().minCompositeScore).toBe(60);
   });
 
-  it('defaults to faster 10s polling and paper execution sizing assumptions', () => {
+  it('defaults to Developer-plan polling/budget and paper execution sizing assumptions', () => {
     delete process.env.POLL_INTERVAL_SECONDS;
     delete process.env.PAPER_SOL_USD_FOR_ESTIMATES;
     delete process.env.PAPER_COMPARISON_NOTIONAL_USD;
+    delete process.env.HELIUS_MONTHLY_CREDITS;
 
     const cfg = loadConfig();
 
-    expect(cfg.pollIntervalSeconds).toBe(10);
+    expect(cfg.pollIntervalSeconds).toBe(30);
+    expect(cfg.heliusMonthlyCredits).toBe(10_000_000);
+    expect(cfg.heliusSoftDailyCredits).toBe(250_000);
+    expect(cfg.heliusHardDailyCredits).toBe(300_000);
+    expect(cfg.enableApiBudgetGovernor).toBe(true);
+    expect(cfg.hotWalletLimit).toBe(75);
+    expect(cfg.walletCandidateAutoAddBatchLimit).toBe(25);
     expect(cfg.paperSolUsdForEstimates).toBe(90);
     expect(cfg.paperComparisonNotionalUsd).toBe(100);
+    expect(cfg.paperTrailingStopActivationMultiple).toBe(1.5);
+    expect(cfg.paperTrailingStopDrawdownPercent).toBe(30);
+  });
+
+  it('allows paper trailing-stop activation and drawdown to be tuned via env', () => {
+    process.env.PAPER_TRAILING_STOP_ACTIVATION_MULTIPLE = '2';
+    process.env.PAPER_TRAILING_STOP_DRAWDOWN_PERCENT = '25';
+
+    const cfg = loadConfig();
+
+    expect(cfg.paperTrailingStopActivationMultiple).toBe(2);
+    expect(cfg.paperTrailingStopDrawdownPercent).toBe(25);
   });
 
   it('defaults Helius RPC to the beta endpoint when only a Helius API key is set', () => {

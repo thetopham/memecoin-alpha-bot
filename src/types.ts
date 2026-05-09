@@ -48,11 +48,20 @@ export interface WalletPerformance {
 export type SwapDirection = 'buy' | 'sell';
 export type SwapSource = 'pumpfun' | 'raydium' | 'jupiter' | 'orca' | 'unknown';
 
+export type WalletTier = 'hot' | 'probation' | 'candidate' | 'archive';
+
 export interface WalletConfig {
   address: string;
   label?: string;
   trust?: number;
   enabled?: boolean;
+  tier?: WalletTier;
+  source?: string;
+  notes?: string;
+  addedAt?: string;
+  lastTierChangeAt?: string;
+  archivedAt?: string;
+  [key: string]: unknown;
 }
 
 export interface WalletSwapEvent {
@@ -143,6 +152,24 @@ export interface AppConfig {
   dbPath: string;
   pollIntervalSeconds: number;
   signatureLimit: number;
+  walletSignatureMaxPages: number;
+  rpcTimeoutMs: number;
+  rpcMaxRetries: number;
+  rpcMinIntervalMs: number;
+  heliusMonthlyCredits: number;
+  heliusSoftDailyCredits: number;
+  heliusHardDailyCredits: number;
+  enableApiBudgetGovernor: boolean;
+  hotWalletLimit: number;
+  probationWalletLimit: number;
+  candidateWalletLimit: number;
+  walletCandidateAutoAddBatchLimit: number;
+  hotWalletScanIntervalSeconds: number;
+  probationWalletScanIntervalSeconds: number;
+  candidateWalletScanIntervalSeconds: number;
+  enableWalletAutoRotation: boolean;
+  enableWalletCandidateAutoAdd: boolean;
+  walletRotationIntervalSeconds: number;
   minWalletsForSignal: number;
   signalWindowSeconds: number;
   minCompositeScore: number;
@@ -151,7 +178,10 @@ export interface AppConfig {
   paperComparisonNotionalUsd: number;
   stopLossPercent: number;
   takeProfitMultiples: number[];
+  paperTrailingStopActivationMultiple: number;
+  paperTrailingStopDrawdownPercent: number;
   processHistoricalOnFirstRun: boolean;
+  dashboardAuthToken?: string;
   telegramBotToken?: string;
   telegramChatId?: string;
   enableCtScanner: boolean;

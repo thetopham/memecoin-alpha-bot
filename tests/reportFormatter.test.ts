@@ -129,6 +129,34 @@ describe('formatOpenPositions', () => {
     expect(text).toContain('peak: 1.06x | drawdown from peak: 0.0%');
     expect(text).not.toContain('drawdown from peak: +0.0%');
   });
+
+  it('prints the configured trailing stop alongside hard stop and take-profit exits', () => {
+    const trade: PaperTrade = {
+      id: 5,
+      tokenAddress: 'TrailDisplay1111111111111111111111pump',
+      symbol: 'TRAIL',
+      entryPriceUsd: 1,
+      entrySol: 0.1,
+      entryTime: 1_700_000_000,
+      status: 'open',
+      maxMultiplier: 7.35,
+      remainingPercent: 20,
+      lastPriceUsd: 5,
+      lastMultiplier: 5,
+      lastPnlPercent: 400,
+      lastCheckedAt: 1_700_000_120,
+    };
+
+    const text = formatOpenPositions([trade], {
+      now: 1_700_000_180,
+      stopLossPercent: -40,
+      takeProfitMultiples: [2, 3, 5],
+      paperTrailingStopActivationMultiple: 1.5,
+      paperTrailingStopDrawdownPercent: 30,
+    });
+
+    expect(text).toContain('exits: stop -40.0%; trailing 30.0% from peak after 1.50x; take-profits 2x→80%, 3x→50%, 5x→20%');
+  });
 });
 
 describe('formatPaperPortfolioSummary', () => {

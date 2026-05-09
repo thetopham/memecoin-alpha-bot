@@ -11,7 +11,7 @@ async function main(): Promise<void> {
   if (cmd === 'wallets') {
     const wallets = loadWallets(cfg.watchedWalletsPath);
     if (wallets.length === 0) console.log('No watched wallets configured.');
-    else wallets.forEach((w, idx) => console.log(`${idx + 1}. ${w.address} label=${w.label ?? ''} trust=${w.trust ?? 1}`));
+    else wallets.forEach((w, idx) => console.log(`${idx + 1}. ${w.address} label=${w.label ?? ''} trust=${w.trust ?? 1} tier=${w.tier ?? 'hot'}`));
     return;
   }
 
@@ -57,13 +57,13 @@ async function main(): Promise<void> {
     }
 
     if (cmd === 'status') {
-      await orchestrator.refreshOpenPositions();
+      if (args.includes('--refresh')) await orchestrator.refreshOpenPositions();
       console.log(orchestrator.statusText());
       return;
     }
 
     if (cmd === 'report') {
-      await orchestrator.refreshOpenPositions();
+      if (args.includes('--refresh')) await orchestrator.refreshOpenPositions();
       console.log(orchestrator.reportText());
       return;
     }
@@ -71,6 +71,14 @@ async function main(): Promise<void> {
     if (cmd === 'wallet-performance' || cmd === 'wallet-scoreboard') {
       const limit = Number(args[0] ?? 12);
       console.log(orchestrator.walletPerformanceText(Number.isFinite(limit) ? limit : 12));
+      return;
+    }
+
+    if (cmd === 'wallet-maintenance' || cmd === 'rotate-wallets') {
+      const result = await orchestrator.maintainWallets(true);
+      console.log(`wallet maintenance complete: ${result.wallets} active wallet(s), ${result.changes.length} change(s)`);
+      for (const change of result.changes.slice(0, 25)) console.log(`- ${change}`);
+      if (result.changes.length > 25) console.log(`- … ${result.changes.length - 25} more`);
       return;
     }
 
