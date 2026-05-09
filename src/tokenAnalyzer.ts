@@ -4,7 +4,24 @@ import { DexScreenerClient } from './dexScreener';
 import { SolanaRpcClient } from './rpc';
 import { getTop10HolderPercent } from './holderAnalysis';
 
-function scoreLiquidity(usd: number): number {
+function isLikelyPumpFun(snapshot: TokenMarketSnapshot): boolean {
+  const dexId = snapshot.dexId?.toLowerCase() ?? '';
+  const url = snapshot.url?.toLowerCase() ?? '';
+  const tokenAddress = snapshot.tokenAddress?.toLowerCase() ?? '';
+  return snapshot.marketStage === 'pumpfun_bonding_curve' || dexId.includes('pump') || url.includes('pump.fun') || tokenAddress.endsWith('pump');
+}
+
+function isPumpFunPreGraduation(snapshot: TokenMarketSnapshot): boolean {
+  return snapshot.marketStage === 'pumpfun_bonding_curve' || (snapshot.liquidityUsd <= 0 && isLikelyPumpFun(snapshot));
+}
+
+function isPreGraduationLiquidityUnavailable(snapshot: TokenMarketSnapshot): boolean {
+  return snapshot.liquidityUsd <= 0 && isPumpFunPreGraduation(snapshot);
+}
+
+function scoreLiquidity(snapshot: TokenMarketSnapshot): number {
+  const usd = snapshot.liquidityUsd;
+  if (isPreGraduationLiquidityUnavailable(snapshot)) return 55;
   if (usd <= 0) return 0;
   if (usd < 1_000) return 10;
   if (usd < 5_000) return 30;
@@ -13,14 +30,42 @@ function scoreLiquidity(usd: number): number {
   return 95;
 }
 
+function assessLiquidity(snapshot: TokenMarketSnapshot): { warning?: string; hardFail?: string } {
+  if (isPreGraduationLiquidityUnavailable(snapshot)) {
+    return { warning: 'DEX liquidity unavailable / likely pre-graduation' };
+  }
+  if (snapshot.liquidityUsd <= 0) {
+    return { hardFail: 'DEX liquidity unavailable / no usable pool' };
+  }
+  if (snapshot.liquidityUsd < 1_000) {
+    return { hardFail: `liquidity too thin at $${snapshot.liquidityUsd.toFixed(0)}` };
+  }
+  if (snapshot.liquidityUsd < 5_000) {
+    return { warning: `liquidity thin at $${snapshot.liquidityUsd.toFixed(0)}` };
+  }
+  return {};
+}
+
 function scoreVolume(h24: number, h1: number): number {
   const h24Score = h24 < 10_000 ? 20 : h24 < 50_000 ? 45 : h24 < 250_000 ? 75 : 95;
   const h1Score = h1 < 2_000 ? 20 : h1 < 10_000 ? 50 : h1 < 50_000 ? 80 : 95;
   return Math.round(h24Score * 0.65 + h1Score * 0.35);
 }
 
-function scoreDistribution(top10: number | null): { score: number; warning?: string; hardFail?: string } {
+function scoreDistribution(snapshot: TokenMarketSnapshot): { score: number; warning?: string; hardFail?: string } {
+  const top10 = snapshot.top10HolderPercent;
   if (top10 == null) return { score: 55, warning: 'top holder concentration unavailable' };
+
+  if (isPumpFunPreGraduation(snapshot)) {
+    if (top10 > 95) return { score: 0, hardFail: `top 10 holders extremely concentrated at ${top10.toFixed(1)}%` };
+    if (top10 > 90) return { score: 10, warning: `pre-graduation holder concentration extreme at ${top10.toFixed(1)}%` };
+    if (top10 > 70) return { score: 25, warning: `pre-graduation holder concentration high at ${top10.toFixed(1)}%` };
+    if (top10 > 60) return { score: 35, warning: `pre-graduation holder concentration elevated at ${top10.toFixed(1)}%` };
+    if (top10 > 45) return { score: 55, warning: `top 10 holders elevated at ${top10.toFixed(1)}%` };
+    if (top10 > 30) return { score: 78 };
+    return { score: 95 };
+  }
+
   if (top10 > 70) return { score: 0, hardFail: `top 10 holders concentrated at ${top10.toFixed(1)}%` };
   if (top10 > 60) return { score: 30, warning: `top 10 holders high at ${top10.toFixed(1)}%` };
   if (top10 > 45) return { score: 55, warning: `top 10 holders elevated at ${top10.toFixed(1)}%` };
@@ -52,16 +97,17 @@ export function scoreTokenSnapshot(snapshot: TokenMarketSnapshot): TokenScore {
   const failReasons: string[] = [];
   const warnings: string[] = [];
 
-  const liquidity = scoreLiquidity(snapshot.liquidityUsd);
+  const liquidity = scoreLiquidity(snapshot);
   const volume = scoreVolume(snapshot.volume24hUsd, snapshot.volume1hUsd);
-  const distributionInfo = scoreDistribution(snapshot.top10HolderPercent);
+  const distributionInfo = scoreDistribution(snapshot);
+  const liquidityInfo = assessLiquidity(snapshot);
   const velocity = scoreVelocity(snapshot.txns5mBuys, snapshot.txns5mSells, snapshot.txns1hBuys, snapshot.txns1hSells);
   const age = scoreAge(snapshot.pairAgeMinutes);
 
   if (distributionInfo.warning) warnings.push(distributionInfo.warning);
   if (distributionInfo.hardFail) failReasons.push(distributionInfo.hardFail);
-  if (snapshot.liquidityUsd < 1_000) failReasons.push(`liquidity too thin at $${snapshot.liquidityUsd.toFixed(0)}`);
-  else if (snapshot.liquidityUsd < 5_000) warnings.push(`liquidity thin at $${snapshot.liquidityUsd.toFixed(0)}`);
+  if (liquidityInfo.warning) warnings.push(liquidityInfo.warning);
+  if (liquidityInfo.hardFail) failReasons.push(liquidityInfo.hardFail);
   if (snapshot.volume24hUsd < 5_000 && snapshot.volume1hUsd < 1_000) failReasons.push('volume too low to trust signal');
   if (snapshot.txns5mSells > Math.max(10, snapshot.txns5mBuys * 2.5)) failReasons.push('sell pressure dominates 5m flow');
 

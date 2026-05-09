@@ -1,0 +1,227 @@
+[
+  {
+    "address": "6AXhqws2wGVyCXUUXmPE89VFspHpnmUvF2xSiJ2RmA7s",
+    "label": "dune_adam_pumpfun_alpha_rank_17",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 17,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "4SPmz6arYDtLrp8bA4izMpieQMPCdLHkbTgC56TA3oxH",
+    "label": "dune_adam_pumpfun_alpha_rank_18",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 18,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "DYJ5AcsGYsvXvMcFYEo9PzC3NMpYXKDj2KYufe6V875c",
+    "label": "dune_adam_pumpfun_alpha_rank_19",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 19,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "9f7vJYyEeFbiW5AvLTZc7woqios8UC3mpwi9MRFtJYjH",
+    "label": "dune_adam_pumpfun_alpha_rank_20",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 20,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "8bDGSpPKw68Uxo9imVbL6BwTFJ25dmZWAW85XT9kcEPv",
+    "label": "dune_adam_pumpfun_alpha_rank_21",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 21,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "1A1zcT94hUQABPDj3g4gbTZpzhzGH5syNfyw8tgzGP5",
+    "label": "dune_adam_pumpfun_alpha_rank_22",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 22,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "JDp55FvzXQS5UryJC2tpHp4QwxmPFCx12DJ3i62WkfPP",
+    "label": "dune_adam_pumpfun_alpha_rank_23",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 23,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "Fogf1G3qXpszgRGKbSw6EM3dutMsJgbgmGPrcuDQTce9",
+    "label": "dune_adam_pumpfun_alpha_rank_24",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 24,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "71wpATgM1dy147f6NBJYxQYFAbhTMMQ1FcnKi7vZkfZr",
+    "label": "dune_adam_pumpfun_alpha_rank_25",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 25,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "HwGqFnPY6H2sGFoDUMYqr63geoR6Tb8yrfnKGLMnARzj",
+    "label": "dune_adam_pumpfun_alpha_rank_53",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 53,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "BBPKQwYLyiPjAX2KTFxanR7vxwa7majAF7c7yoaRX8oR",
+    "label": "dune_adam_pumpfun_alpha_rank_54",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 54,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "MNhBbrscBPmeid54buiqSgyWa4D8PY6uKHoK2wJsTJN",
+    "label": "dune_adam_pumpfun_alpha_rank_55",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 55,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "BwaVFCDJ4HfRfFWq1S23LHkk5VF4GKEw9oz7F1PxgcHv",
+    "label": "dune_adam_pumpfun_alpha_rank_56",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 56,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "8rvAsDKeAcEjEkiZMug9k8v1y8mW6gQQiMobd89Uy7qR",
+    "label": "dune_adam_pumpfun_alpha_rank_57",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 57,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "dc5euoW1in5oV5FBv4hRe9v7MqpEQ4M3nrqGySJiMUe",
+    "label": "dune_adam_pumpfun_alpha_rank_58",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 58,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "83QQFLxcEzuJZaejBnzAiW5tyfyaRHMLZnkhJbRPRWtf",
+    "label": "dune_adam_pumpfun_alpha_rank_59",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 59,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "on1yUpq8wmKxFoW1Arnu7G4xwm6T9yJ8dHwyHDfkiKS",
+    "label": "dune_adam_pumpfun_alpha_rank_60",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 60,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "Dsi8ntQziuCPt16TStjG4tgviracSryHsRcH72zbwRgu",
+    "label": "dune_adam_pumpfun_alpha_rank_61",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 61,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "6d22FozaKK239PoBYVffkYKA1QPQZE8fC7AQkpmHQfjp",
+    "label": "dune_adam_pumpfun_alpha_rank_62",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 62,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "HoSSbLeRnJct3ajdMgzs33ymukymr6aeeom8DQMf3B88",
+    "label": "dune_adam_pumpfun_alpha_rank_63",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 63,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "dc5Lj8UMqurRTbgEmq7VuS8mHSbWfGfc8f4veQrzM1t",
+    "label": "dune_adam_pumpfun_alpha_rank_64",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 64,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "BTf4A2exGK9BCVDNzy65b9dUzXgMqB4weVkvTMFQsadd",
+    "label": "dune_adam_pumpfun_alpha_rank_65",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 65,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "BENE3RkN9qxCMjvHtJxWK1RApcQkmcExDPRvaLXfvmKh",
+    "label": "dune_adam_pumpfun_alpha_rank_66",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 66,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+    "label": "dune_adam_pumpfun_alpha_rank_67",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 67,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  },
+  {
+    "address": "D3sovmjANgA8V27e5rnQft8kV3mocSH8gw9zwth3Ba9g",
+    "label": "dune_adam_pumpfun_alpha_rank_68",
+    "trust": 0.3,
+    "enabled": true,
+    "rank": 68,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+  }
+]

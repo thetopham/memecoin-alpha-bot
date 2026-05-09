@@ -130,5 +130,205 @@
     "enabled": true,
     "source": "Dune Pump.Fun Alpha Wallets realized-profit table",
     "notes": "Added by vet-wallets 2026-05-07T06:54:23.102Z: decision=keep, score=90/100, buys=15, distinct_buy_tokens=7, avg_buy_sol=0.505."
+  },
+  {
+    "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
+    "label": "cielo_list_8137_c21r6y",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Added by vet-wallets 2026-05-08T19:18:21.045Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=9, avg_buy_sol=2.359."
+  },
+  {
+    "address": "BNnN2MqfWLvgThYBsv6v8JQaYZXYKYahC5YCy27Ct1cX",
+    "label": "dune_dev2020_solana_alpha_rank_26",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=95/100, buys=7, distinct_buy_tokens=7, avg_buy_sol=1.403."
+  },
+  {
+    "address": "BfqvqsBXWbD7D9w9SRiKnst6Rhofgtb5Dr4wGprL57Gp",
+    "label": "dune_dev2020_solana_alpha_rank_28",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:49:24.453Z: decision=keep, score=90/100, buys=27, distinct_buy_tokens=3, avg_buy_sol=4.134."
+  },
+  {
+    "address": "12xfu174SRvgp2RFq5M9AvvQnPrDqJQNrPcnWbFd4Phf",
+    "label": "dune_dev2020_solana_alpha_rank_33",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.794."
+  },
+  {
+    "address": "ADXWGeh5jhNSMbt3R1Hnr8R9fi4amAgJyc5oudSWQNJu",
+    "label": "dune_dev2020_solana_alpha_rank_34",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=3.287."
+  },
+  {
+    "address": "4jSmEmBkuBi1JxZHM1khkf57xPR2oW1EnkRxqehq1cSK",
+    "label": "dune_dev2020_solana_alpha_rank_35",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=12, distinct_buy_tokens=10, avg_buy_sol=1.451."
+  },
+  {
+    "address": "BQm74qyqiUMRBkyxgLV5TRSaerTJqPxKB3Spa4tscPTN",
+    "label": "dune_dev2020_solana_alpha_rank_36",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=3.354."
+  },
+  {
+    "address": "FP1CLVYwpxYJAtE3vEyASi54pEPGzcobReJbwRSTUn3P",
+    "label": "dune_dev2020_solana_alpha_rank_40",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.276Z: decision=keep, score=95/100, buys=8, distinct_buy_tokens=5, avg_buy_sol=49.114."
+  },
+  {
+    "address": "3gXrmvpjxZtPm5erFznwSFPDwsbcMGji3oxsvFBXZJQb",
+    "label": "dune_dev2020_solana_alpha_rank_47",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=83/100, buys=6, distinct_buy_tokens=2, avg_buy_sol=3.340."
+  },
+  {
+    "address": "DmFSDGKv5H5Bu2t9C3qYFkKaAcAUyWmf7J34H6wLA5rY",
+    "label": "dune_dev2020_solana_alpha_rank_50",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune dev2020/solana-alphas visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=14, distinct_buy_tokens=11, avg_buy_sol=1.125."
+  },
+  {
+    "address": "7QsRjSy9hiWYnEwSaWKjDcV4Zik1VJSCYt89amPsL6gB",
+    "label": "dune_couldbebasic_top_trader_rank_1",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=75/100, buys=20, distinct_buy_tokens=2, avg_buy_sol=6.402."
+  },
+  {
+    "address": "6vZdEjUCvAXNcVCyVBUTvZKDVf6ENmnXGS6oe3feoAo4",
+    "label": "dune_couldbebasic_top_trader_rank_2",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=95/100, buys=25, distinct_buy_tokens=15, avg_buy_sol=1.358."
+  },
+  {
+    "address": "RDftc8wN9o4tqF9KMfho6YaUrsAVSst3h2n12QtJ4RM",
+    "label": "dune_couldbebasic_top_trader_rank_5",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=90/100, buys=11, distinct_buy_tokens=9, avg_buy_sol=1.321."
+  },
+  {
+    "address": "2znoHTryV4W8ZqK9rU9Ecy2f6s7EVU6osrifQAryahcJ",
+    "label": "dune_couldbebasic_top_trader_rank_8",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.053."
+  },
+  {
+    "address": "HPjovxKqpZWHyDJSK6oAJ2TqbNH3QrUgNhWn3WHyu4ip",
+    "label": "dune_couldbebasic_top_trader_rank_11",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:52:03.277Z: decision=keep, score=74/100, buys=3, distinct_buy_tokens=3, avg_buy_sol=1.401."
+  },
+  {
+    "address": "jcya6XKeSNp26N2bjfoBy8AvFaWV9Ns2YyUhqWZH36F",
+    "label": "dune_couldbebasic_top_trader_rank_13",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=87/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=5.790."
+  },
+  {
+    "address": "69TEHviEqXZd2q4njbGnuyFuEAuz4JNCrDGFEehkGs48",
+    "label": "dune_couldbebasic_top_trader_rank_18",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=82/100, buys=4, distinct_buy_tokens=4, avg_buy_sol=1.405."
+  },
+  {
+    "address": "71XNkYoJBnTePLPRZkQLQBihr3ReZ5SGPRwTsgdehMza",
+    "label": "dune_couldbebasic_top_trader_rank_19",
+    "trust": 0.5,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=77/100, buys=4, distinct_buy_tokens=3, avg_buy_sol=1.024."
+  },
+  {
+    "address": "57oTC6SmmNe2HwF9HTUzrNjBaEJzEomzp3iCaCbAGKBJ",
+    "label": "dune_couldbebasic_top_trader_rank_21",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=95/100, buys=10, distinct_buy_tokens=8, avg_buy_sol=2.001."
+  },
+  {
+    "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+    "label": "dune_couldbebasic_top_trader_rank_23",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=13, distinct_buy_tokens=3, avg_buy_sol=6.077."
+  },
+  {
+    "address": "7Koj63CwUxq9CNPcSqirteQD8izDqyg7t2uUx2B5Ckv1",
+    "label": "dune_couldbebasic_top_trader_rank_24",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune couldbebasic/top-traders visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=85/100, buys=9, distinct_buy_tokens=6, avg_buy_sol=0.928."
+  },
+  {
+    "address": "7ES7vcS9vPg2ALkuK8d9gEZnhu7j4bYyWKJ3wLXoobrY",
+    "label": "dune_adam_pumpfun_alpha_rank_2",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=80/100, buys=9, distinct_buy_tokens=3, avg_buy_sol=0.145."
+  },
+  {
+    "address": "4XnHZZmHwSQ8RszJsdc7snvxG8dZtm6g4hvpkCMkguMx",
+    "label": "dune_adam_pumpfun_alpha_rank_14",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:54:20.027Z: decision=keep, score=90/100, buys=8, distinct_buy_tokens=7, avg_buy_sol=0.103."
+  },
+  {
+    "address": "BTf4A2exGK9BCVDNzy65b9dUzXgMqB4weVkvTMFQsadd",
+    "label": "dune_adam_pumpfun_alpha_rank_65",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=95/100, buys=13, distinct_buy_tokens=8, avg_buy_sol=2.519."
+  },
+  {
+    "address": "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+    "label": "dune_adam_pumpfun_alpha_rank_67",
+    "trust": 0.55,
+    "enabled": true,
+    "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+    "notes": "Added by vet-wallets 2026-05-08T19:56:00.095Z: decision=keep, score=90/100, buys=26, distinct_buy_tokens=7, avg_buy_sol=0.357."
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-05-08T19:44:01Z",
+  "sources": [
+    {
+      "url": "https://dune.com/discover/content/trending?resource-type=dashboards&q=pump",
+      "kind": "dashboard_discovery_only",
+      "rawAddressCount": 0,
+      "selectedAddressCount": 0,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/discover_content_trending_resource_type_dashboards_q_pump.md"
+    },
+    {
+      "url": "https://dune.com/dev2020/solana-alphas",
+      "kind": "wallet_dashboard",
+      "rawAddressCount": 50,
+      "selectedAddressCount": 50,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/dev2020_solana_alphas.md"
+    },
+    {
+      "url": "https://dune.com/adam_tehc/pumpfun-mayhem",
+      "kind": "token_creator_dashboard_skip",
+      "rawAddressCount": 22,
+      "selectedAddressCount": 0,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/adam_tehc_pumpfun_mayhem.md"
+    },
+    {
+      "url": "https://dune.com/couldbebasic/top-traders",
+      "kind": "wallet_dashboard",
+      "rawAddressCount": 25,
+      "selectedAddressCount": 25,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/couldbebasic_top_traders.md"
+    },
+    {
+      "url": "https://dune.com/adam_tehc/pump-fun-alpha-wallets",
+      "kind": "wallet_dashboard",
+      "rawAddressCount": 68,
+      "selectedAddressCount": 68,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/adam_tehc_pump_fun_alpha_wallets.md"
+    },
+    {
+      "url": "https://dune.com/adam_tehc/pumpfun",
+      "kind": "protocol_token_dashboard_skip",
+      "rawAddressCount": 4,
+      "selectedAddressCount": 0,
+      "savedMarkdown": "/home/thetopham/memecoin-alpha-bot/data/dune-screens/adam_tehc_pumpfun.md"
+    }
+  ],
+  "candidatePath": "/home/thetopham/memecoin-alpha-bot/config/dune-wallet-candidates.json",
+  "candidateCount": 115
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
+    "label": "cielo_list_8137_c21r6y",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 62,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 27,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.443Z"
+    }
+  },
+  {
+    "address": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+    "label": "cielo_list_8137_4be9cv",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 54,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 3,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    }
+  },
+  {
+    "address": "CNudZYFgpbT26fidsiNrWfHeGTBMMeVWqruZXsEkcUPc",
+    "label": "cielo_list_36875_cnudzy",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 54,
+      "sources": [
+        "Cielo Public List Feed (Solana High Winrate 90%)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 3,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:41.032Z"
+    }
+  },
+  {
+    "address": "2RssnB7hcrnBEx55hXMKT1E7gN27g9ecQFbbCc5Zjajq",
+    "label": "cielo_list_36875_2rssnb",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (Solana High Winrate 90%)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:41.032Z"
+    }
+  },
+  {
+    "address": "2XyQF5q5EWdaGCH8ZfLjiVpvbpLXz8D78T9MzUpNEGBL",
+    "label": "cielo_list_8137_2xyqf5",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    }
+  },
+  {
+    "address": "CPydqKcEEeKTR6wt3L15G8S5Ea4bxjS2vvjiW9vw1UwK",
+    "label": "cielo_list_8137_cpydqk",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    }
+  },
+  {
+    "address": "EMp115dQaDGcMnogrB8FnxBc9XF6AZAq4QJ9wFK5utFB",
+    "label": "cielo_list_8137_emp115",
+    "trust": 0.3,
+    "enabled": true,
+    "source": "Cielo Public List Feed (SOYLANA Traders)",
+    "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+    "cielo": {
+      "score": 50,
+      "sources": [
+        "Cielo Public List Feed (SOYLANA Traders)"
+      ],
+      "reasons": [
+        "observed in Cielo feed; not proof of skill until RPC vetting passes"
+      ],
+      "metrics": {
+        "feedEvents": 2,
+        "distinctTokens": 0,
+        "maxUsd": 0,
+        "totalUsd": 0
+      },
+      "discoveredAt": "2026-05-08T19:17:42.442Z"
+    }
+  }
+]

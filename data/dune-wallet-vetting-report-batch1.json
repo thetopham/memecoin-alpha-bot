@@ -1,0 +1,1005 @@
+{
+  "generatedAt": "2026-05-08T19:49:24.444Z",
+  "sourceFile": "/home/thetopham/memecoin-alpha-bot/config/dune-wallet-candidates-batch1.json",
+  "signatureLimit": 40,
+  "apply": true,
+  "includeProbation": false,
+  "results": [
+    {
+      "candidate": {
+        "address": "CstHNDAbcrK6W5bmkvaHqPpkmG9wnqpVVXCvbaxSy1KC",
+        "label": "dune_dev2020_solana_alpha_rank_1",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 1,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.701708611117469,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "FK61iKvX1EAovZwDcXWSZJCEfN2aqC8iXEWgMzGDwrfu",
+        "label": "dune_dev2020_solana_alpha_rank_2",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 2,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 18.48923027780321,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "2D1sKYjG4qTinM8eu3aUyCnwduSC1sa7CzxMA5ZPgguv",
+        "label": "dune_dev2020_solana_alpha_rank_3",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 3,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.579074722197321,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "Gh1oXa5xyK7v3QS3GPtkUwFJ79f3fDTmRegyjhKBEbW9",
+        "label": "dune_dev2020_solana_alpha_rank_4",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 4,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.473631666633818,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "Es7Zr7pHMg7YVu1jS1KnzazjPdhfprHFxRM39uBAuaDG",
+        "label": "dune_dev2020_solana_alpha_rank_5",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 5,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.720408055583636,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "69PLNcg8tzdNzyJHLcQmyZMiENVUt6DoScAR58jRSvZs",
+        "label": "dune_dev2020_solana_alpha_rank_6",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 6,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.515480833318499,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "EZCoXkX57esifaLF8r1queG6X7G5eY7K6bSxqspnuMNE",
+        "label": "dune_dev2020_solana_alpha_rank_7",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 7,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.33971277780003,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "8kQCKHfxoXQbgiMqqV27tLerAnQRk7tJ8Ay21CVqNG6W",
+        "label": "dune_dev2020_solana_alpha_rank_8",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 8,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.457100277807977,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "8UiZ8gCSAQ7HFrcfM5BVHomS7sXmYTqeJM4QV8DxqhfD",
+        "label": "dune_dev2020_solana_alpha_rank_9",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 9,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 42.73893000000053,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "99ENssDE6J6AwddMfbx8JsQ8SQ3u6UasT1CKzWzJK2S2",
+        "label": "dune_dev2020_solana_alpha_rank_10",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 10,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.594018333355586,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "DJJRkwJLMTiY8WLkLczSPegTs8M4ej9SetWDmD5ibPA1",
+        "label": "dune_dev2020_solana_alpha_rank_11",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 11,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 6.407446111109522,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "VUYouZqqbx6KzbQehwxofXw2PVy76jwD8aPqsL9Atui",
+        "label": "dune_dev2020_solana_alpha_rank_12",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 12,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 17.915286944442325,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "AfKKFGebQzBtTWx5PhEugVgZr9XqbAjhbEH1N6A7kWkf",
+        "label": "dune_dev2020_solana_alpha_rank_13",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 13,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 51.97984861108992,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "6AMwMpFq3TdxVLsMVtJTmNgCGLjJS3bzhQcVFk7zhY1v",
+        "label": "dune_dev2020_solana_alpha_rank_14",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 14,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 30.001407499975628,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BAojWeedZJSRCkfN5Wv2q64roTXCDMY5ffgsFhkyjEcE",
+        "label": "dune_dev2020_solana_alpha_rank_15",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 15,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.345147777795795,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "6gY29Ld6p7SFHTbpJX24R97iKVg7RQHhjA12gcTZW9Ms",
+        "label": "dune_dev2020_solana_alpha_rank_16",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 16,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 3.8786686111158795,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "CMyB7MZ6J5YDgqXpgjQRzdjKxrzQ1aEU6TsKNhYko731",
+        "label": "dune_dev2020_solana_alpha_rank_17",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 17,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 9.329238055547078,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "3xp8Rge4tppRrWXDfJVFAZa3PbcbftRvr6t7sNRRb5gF",
+        "label": "dune_dev2020_solana_alpha_rank_18",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 18,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.34677888890108,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "9zipSVy2ScuWNNnX9YG3Z4FERArcyBi8fG7yC4UtrCdF",
+        "label": "dune_dev2020_solana_alpha_rank_19",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 19,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 25.341236111124356,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "EqgBRgpujqZW76Wej7y63HQjnE48SotyNXKS3MPVsynp",
+        "label": "dune_dev2020_solana_alpha_rank_20",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 20,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.34859944442908,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "7CrHhKJ3RAs1LKvKX6jYdr5nDvmozkrJVZpbwL6dbhvj",
+        "label": "dune_dev2020_solana_alpha_rank_21",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 21,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.38839055558046,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "CHbV6VAWw5mL58E78WApUKXbeooFkXLPXMDfAjwXBxbC",
+        "label": "dune_dev2020_solana_alpha_rank_22",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 22,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 25.34481194443173,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "FPGWD5MYVq16X23wUYRHKHg26u7FQbLapyRvkYs5Z87a",
+        "label": "dune_dev2020_solana_alpha_rank_23",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 23,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.35257944444815,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "A9CKCFq5kMLenfVSVSr84NKBnWN7s59nQm5nX8SqGqcK",
+        "label": "dune_dev2020_solana_alpha_rank_24",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 24,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.353775555557675,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "E4vDmJsBtGuac2NFnLpFjM2TioY3znREuH1AqpmijL9x",
+        "label": "dune_dev2020_solana_alpha_rank_25",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 25,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 54.35480222225189,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BNnN2MqfWLvgThYBsv6v8JQaYZXYKYahC5YCy27Ct1cX",
+        "label": "dune_dev2020_solana_alpha_rank_26",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 26,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 12,
+        "buys": 7,
+        "sells": 5,
+        "distinctBuyTokens": 7,
+        "distinctSellTokens": 5,
+        "avgBuySol": 1.403069123142857,
+        "medianBuySol": 1.236881335,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 0.04001861108673943,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 95,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "4B6641AznHSnvd613HqP2RX3QHxEDmfHs239CPJNSdMr",
+        "label": "dune_dev2020_solana_alpha_rank_27",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 27,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 6,
+        "buys": 6,
+        "sells": 0,
+        "distinctBuyTokens": 1,
+        "distinctSellTokens": 0,
+        "avgBuySol": 9.175716667666668,
+        "medianBuySol": 7.4503000010000004,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 5.62529805554284,
+        "sources": [
+          "raydium"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 48,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "no parsed sells in sample; exit behavior unknown",
+        "repeat buys concentrated in one token; not enough breadth"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BfqvqsBXWbD7D9w9SRiKnst6Rhofgtb5Dr4wGprL57Gp",
+        "label": "dune_dev2020_solana_alpha_rank_28",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 28,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 39,
+        "buys": 27,
+        "sells": 12,
+        "distinctBuyTokens": 3,
+        "distinctSellTokens": 3,
+        "avgBuySol": 4.133918095814813,
+        "medianBuySol": 1.017730001,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 23.60391222225295,
+        "sources": [
+          "raydium"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 90,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "FhC1Xq34SmHk3PCRijTtZ2y3fGXm8LEBnePc8By6oKcY",
+        "label": "dune_dev2020_solana_alpha_rank_29",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 29,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 4,
+        "buys": 2,
+        "sells": 2,
+        "distinctBuyTokens": 2,
+        "distinctSellTokens": 2,
+        "avgBuySol": 1.5220790800000001,
+        "medianBuySol": 1.5220790800000001,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 0.4529786111248864,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 66,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "usable but thin sample; watch manually before trusting"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "2tT5T2ewWA37o31xtnPxwQofSJDPeG2FkBzFa2B6Bg7Q",
+        "label": "dune_dev2020_solana_alpha_rank_30",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 30,
+        "source": "Dune dev2020/solana-alphas visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 2,
+        "buys": 1,
+        "sells": 1,
+        "distinctBuyTokens": 1,
+        "distinctSellTokens": 1,
+        "avgBuySol": 2.025005001,
+        "medianBuySol": 2.025005001,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 45.20262305557728,
+        "sources": [
+          "raydium"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 53,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "usable but thin sample; watch manually before trusting"
+      ]
+    }
+  ]
+}
