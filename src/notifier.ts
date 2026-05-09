@@ -1,5 +1,5 @@
 import type { AppConfig, ConvergenceSignal, PaperTrade, TokenScore } from './types';
-import { formatPct, formatUsd, shortAddress } from './utils';
+import { formatLiquidity, formatPct, formatUsd, shortAddress } from './utils';
 
 export class Notifier {
   constructor(private readonly cfg: Pick<AppConfig, 'telegramBotToken' | 'telegramChatId'>) {}
@@ -31,7 +31,7 @@ export class Notifier {
       `convergence: ${signal.windowSeconds}s | trust: ${signal.weightedTrust.toFixed(2)}`,
       `score: ${score.composite}/100 → PAPER ENTER ${paperSol.toFixed(3)} SOL`,
       `volume: ${formatUsd(snap.volume24hUsd)} 24h | ${formatUsd(snap.volume1hUsd)} 1h`,
-      `liq: ${formatUsd(snap.liquidityUsd)} | top10: ${formatPct(snap.top10HolderPercent)}`,
+      `liq: ${formatLiquidity(snap.liquidityUsd, snap.marketStage)} | top10: ${formatPct(snap.top10HolderPercent)}`,
       `flow 5m: ${snap.txns5mBuys} buys / ${snap.txns5mSells} sells`,
       snap.url ? `chart: ${snap.url}` : undefined,
     ].filter(Boolean).join('\n'));

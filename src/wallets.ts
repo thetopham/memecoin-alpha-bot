@@ -2,11 +2,15 @@ import fs from 'fs';
 import path from 'path';
 import type { WalletConfig } from './types';
 
-const SOLANA_ADDRESS_RE = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
+export const SOLANA_ADDRESS_RE = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
+
+export function isSolanaWalletAddress(value: unknown): value is string {
+  return typeof value === 'string' && SOLANA_ADDRESS_RE.test(value.trim());
+}
 
 export function normalizeWallet(input: WalletConfig): WalletConfig {
   const address = input.address?.trim();
-  if (!address || !SOLANA_ADDRESS_RE.test(address)) {
+  if (!address || !isSolanaWalletAddress(address)) {
     throw new Error(`Invalid Solana wallet address: ${input.address}`);
   }
   return {

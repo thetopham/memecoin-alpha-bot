@@ -1,0 +1,19 @@
+[Unit]
+Description=Memecoin Alpha Bot read-only paper dashboard
+After=network-online.target memecoin-alpha-bot.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/thetopham/memecoin-alpha-bot
+EnvironmentFile=/home/thetopham/memecoin-alpha-bot/.env
+ExecStart=/home/thetopham/.local/bin/npm run dashboard:dist -- --host 0.0.0.0 --port 8788 --refresh 15
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/thetopham/memecoin-alpha-bot/data
+
+[Install]
+WantedBy=default.target

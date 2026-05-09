@@ -1,0 +1,1032 @@
+{
+  "generatedAt": "2026-05-08T19:54:20.025Z",
+  "sourceFile": "/home/thetopham/memecoin-alpha-bot/config/dune-wallet-candidates-batch3.json",
+  "signatureLimit": 40,
+  "apply": true,
+  "includeProbation": false,
+  "results": [
+    {
+      "candidate": {
+        "address": "8XjdJLcw5G7qzhh1tAUaHEsPHjyoU6Yr6QRD1kT43zKJ",
+        "label": "dune_couldbebasic_top_trader_rank_12",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 12,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 5,
+        "buys": 2,
+        "sells": 3,
+        "distinctBuyTokens": 2,
+        "distinctSellTokens": 3,
+        "avgBuySol": 0.508277148,
+        "medianBuySol": 0.508277148,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1.8376661111248864,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 66,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "usable but thin sample; watch manually before trusting"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "jcya6XKeSNp26N2bjfoBy8AvFaWV9Ns2YyUhqWZH36F",
+        "label": "dune_couldbebasic_top_trader_rank_13",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 13,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 9,
+        "buys": 4,
+        "sells": 5,
+        "distinctBuyTokens": 4,
+        "distinctSellTokens": 3,
+        "avgBuySol": 5.790259101749999,
+        "medianBuySol": 7.015079246,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 2.0584997222158643,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 87,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "GwNF32orSP9X5GwfWToaJJFNE8ukJ4SKCuScfQvJtMFN",
+        "label": "dune_couldbebasic_top_trader_rank_14",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 14,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 24.52318611111906,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 15,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "5DhK9dLRMuMv4WdjumT9FRcg7PUTNw4TYurdzdNFJKig",
+        "label": "dune_couldbebasic_top_trader_rank_15",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 15,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 15,
+        "buys": 7,
+        "sells": 8,
+        "distinctBuyTokens": 7,
+        "distinctSellTokens": 7,
+        "avgBuySol": 0.27207908000000003,
+        "medianBuySol": 0.27207908,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 148.1367272222042,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 78,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "stale: latest signature 148.1h ago"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "3uASRhAFBodj83KjeQuYituz9NgRTr9SJAvgxpJhfeso",
+        "label": "dune_couldbebasic_top_trader_rank_16",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 16,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 5,
+        "buys": 0,
+        "sells": 5,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 2,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 3.8191624999708598,
+        "sources": [
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 30,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BvvoNBZH1po9zsVsGuiNpWkh196Nb5pusGTGnCyc7iFp",
+        "label": "dune_couldbebasic_top_trader_rank_17",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 17,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 3,
+        "buys": 0,
+        "sells": 3,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 1,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 2.516328333351347,
+        "sources": [
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 25,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "69TEHviEqXZd2q4njbGnuyFuEAuz4JNCrDGFEehkGs48",
+        "label": "dune_couldbebasic_top_trader_rank_18",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 18,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 11,
+        "buys": 4,
+        "sells": 7,
+        "distinctBuyTokens": 4,
+        "distinctSellTokens": 5,
+        "avgBuySol": 1.40537908,
+        "medianBuySol": 0.90537908,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 44.125200555523236,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 82,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "71XNkYoJBnTePLPRZkQLQBihr3ReZ5SGPRwTsgdehMza",
+        "label": "dune_couldbebasic_top_trader_rank_19",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 19,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 6,
+        "buys": 4,
+        "sells": 2,
+        "distinctBuyTokens": 3,
+        "distinctSellTokens": 2,
+        "avgBuySol": 1.0242979405,
+        "medianBuySol": 0.9575914175,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 33.112615000009534,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 77,
+      "suggestedTrust": 0.5,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "Ao4YuEqvCjiqrQwoaHBMesZbaKnNYn82cK7zwM5tV49X",
+        "label": "dune_couldbebasic_top_trader_rank_20",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 20,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 2,
+        "buys": 0,
+        "sells": 2,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 1,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 0.6021036110983955,
+        "sources": [
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 25,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "57oTC6SmmNe2HwF9HTUzrNjBaEJzEomzp3iCaCbAGKBJ",
+        "label": "dune_couldbebasic_top_trader_rank_21",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 21,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 19,
+        "buys": 10,
+        "sells": 9,
+        "distinctBuyTokens": 8,
+        "distinctSellTokens": 6,
+        "avgBuySol": 2.0014452686,
+        "medianBuySol": 2.0001696305000003,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 0.3251633333497577,
+        "sources": [
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 95,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "3CnGWYtFKyToyU8iEzj9TPwqxNqT5M34fsy5ppBUcwUd",
+        "label": "dune_couldbebasic_top_trader_rank_22",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 22,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 2,
+        "buys": 1,
+        "sells": 1,
+        "distinctBuyTokens": 1,
+        "distinctSellTokens": 1,
+        "avgBuySol": 1.57716808,
+        "medianBuySol": 1.57716808,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 67.83622055557039,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 53,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "usable but thin sample; watch manually before trusting"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+        "label": "dune_couldbebasic_top_trader_rank_23",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 23,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 19,
+        "buys": 13,
+        "sells": 6,
+        "distinctBuyTokens": 3,
+        "distinctSellTokens": 5,
+        "avgBuySol": 6.077422169384615,
+        "medianBuySol": 5.00010059,
+        "zeroishEvents": 2,
+        "zeroishRate": 0.10526315789473684,
+        "latestActivityAgeHours": 0.41362472222910984,
+        "sources": [
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 90,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "7Koj63CwUxq9CNPcSqirteQD8izDqyg7t2uUx2B5Ckv1",
+        "label": "dune_couldbebasic_top_trader_rank_24",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 24,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 14,
+        "buys": 9,
+        "sells": 5,
+        "distinctBuyTokens": 6,
+        "distinctSellTokens": 4,
+        "avgBuySol": 0.9284300987777778,
+        "medianBuySol": 1.026124084,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 39.0992386111286,
+        "sources": [
+          "pumpfun",
+          "raydium"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 85,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "CsrH6zneWz7dpTeza6AMNJfBkcPddhyT5g7vJ2dgoXg5",
+        "label": "dune_couldbebasic_top_trader_rank_25",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 25,
+        "source": "Dune couldbebasic/top-traders visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 13,
+        "buys": 9,
+        "sells": 4,
+        "distinctBuyTokens": 5,
+        "distinctSellTokens": 3,
+        "avgBuySol": 0.7532358801111112,
+        "medianBuySol": 0.328543331,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 406.0818200000127,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 70,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 406.1h ago"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "sHE59qLb4p9HjswXvjmQhRdrWP8VYLYcAEaBKhY8Sr4",
+        "label": "dune_adam_pumpfun_alpha_rank_1",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 1,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1.8832447222206328,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 20,
+      "suggestedTrust": 0,
+      "reasons": [
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "7ES7vcS9vPg2ALkuK8d9gEZnhu7j4bYyWKJ3wLXoobrY",
+        "label": "dune_adam_pumpfun_alpha_rank_2",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 2,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 15,
+        "buys": 9,
+        "sells": 6,
+        "distinctBuyTokens": 3,
+        "distinctSellTokens": 6,
+        "avgBuySol": 0.14461442455555554,
+        "medianBuySol": 0.082681162,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 69.91695305552747,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "keep",
+      "score": 80,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "FRZYzBoWGLJayCYs5FyLFvvseF5jGVgsuBJqRB1JZ9aG",
+        "label": "dune_adam_pumpfun_alpha_rank_3",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 3,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 461.1808272222016,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 0,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 461.2h ago",
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "Ajrs21vUxegh3wN3MW7dQ4o1K7fMkXQtxVisajGGkNv6",
+        "label": "dune_adam_pumpfun_alpha_rank_4",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 4,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 19,
+        "buys": 10,
+        "sells": 9,
+        "distinctBuyTokens": 10,
+        "distinctSellTokens": 9,
+        "avgBuySol": 0.052938711900000004,
+        "medianBuySol": 0.0614234,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 353.87164472222327,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 65,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 353.9h ago"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "143367RzkF5PbjCv5j2TrTfQuboffS8Nn1nJzx6cT8kh",
+        "label": "dune_adam_pumpfun_alpha_rank_5",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 5,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 732.2704827777544,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 0,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 732.3h ago",
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "8hzgfP61XoG2ZXPwi3Exw2X9FUk3DeosV9MV3cXUXhNJ",
+        "label": "dune_adam_pumpfun_alpha_rank_6",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 6,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 18,
+        "buys": 7,
+        "sells": 11,
+        "distinctBuyTokens": 7,
+        "distinctSellTokens": 11,
+        "avgBuySol": 0.07068264957142857,
+        "medianBuySol": 0.072630548,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 704.9223144444492,
+        "sources": [
+          "pumpfun",
+          "jupiter"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 65,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 704.9h ago"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "AivxDFTStyNHydwLTCAP4uwYqX2wt6qRJ8ePpwBbq7iP",
+        "label": "dune_adam_pumpfun_alpha_rank_7",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 7,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1196.8050283333328,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 0,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1196.8h ago",
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BVpwfw4ezDzp5x1gNSW9cqrTTySwXyrG9SsdCBLxrF9j",
+        "label": "dune_adam_pumpfun_alpha_rank_8",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 8,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 27,
+        "buys": 14,
+        "sells": 13,
+        "distinctBuyTokens": 12,
+        "distinctSellTokens": 13,
+        "avgBuySol": 0.3867347347857142,
+        "medianBuySol": 0.51307908,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 990.9708447221915,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 70,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 991.0h ago"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "47jxbPgo8Sx8pedT2BJD6dukDTTzhqrYDKpup6FuUwk8",
+        "label": "dune_adam_pumpfun_alpha_rank_9",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 9,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 30,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1558.0222966666354,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 0,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1558.0h ago",
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "8ry9ZT8WHeDSBj19PooTAkMfTx8F8DMVbAbgQqy6Ri4x",
+        "label": "dune_adam_pumpfun_alpha_rank_10",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 10,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 11,
+        "buys": 11,
+        "sells": 0,
+        "distinctBuyTokens": 10,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0.011506875454545455,
+        "medianBuySol": 0.012371199,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 70.627524166637,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "probation",
+      "score": 65,
+      "suggestedTrust": 0.3,
+      "reasons": [
+        "average buy too small at 0.012 SOL",
+        "no parsed sells in sample; exit behavior unknown"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "HYnTKxM99Bw9i3DwbWzbyhmnikN8eLzty7kipF4rd1fu",
+        "label": "dune_adam_pumpfun_alpha_rank_11",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 11,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 0,
+        "buys": 0,
+        "sells": 0,
+        "distinctBuyTokens": 0,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0,
+        "medianBuySol": 0,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1657.4413386111128,
+        "sources": [],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 0,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1657.4h ago",
+        "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+        "no parsed buys in sample"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "BU5EXZdESb2W2p4C3Vzy7voJEdcBBXnVicFqbtiYqGGw",
+        "label": "dune_adam_pumpfun_alpha_rank_12",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 12,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 13,
+        "buys": 3,
+        "sells": 10,
+        "distinctBuyTokens": 2,
+        "distinctSellTokens": 10,
+        "avgBuySol": 0.009268037,
+        "medianBuySol": 0.01099728,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1085.9273347222143,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 29,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1085.9h ago",
+        "average buy too small at 0.009 SOL"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "jup9khji7EGirrXdCVmdQPasZwPcw5ydV2jG7guasaF",
+        "label": "dune_adam_pumpfun_alpha_rank_13",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 13,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 13,
+        "buys": 9,
+        "sells": 4,
+        "distinctBuyTokens": 8,
+        "distinctSellTokens": 3,
+        "avgBuySol": 0.020196447,
+        "medianBuySol": 0.022707847,
+        "zeroishEvents": 5,
+        "zeroishRate": 0.38461538461538464,
+        "latestActivityAgeHours": 1343.3325800000296,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 60,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1343.3h ago",
+        "average buy too small at 0.020 SOL"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "4XnHZZmHwSQ8RszJsdc7snvxG8dZtm6g4hvpkCMkguMx",
+        "label": "dune_adam_pumpfun_alpha_rank_14",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 14,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 14,
+        "buys": 8,
+        "sells": 6,
+        "distinctBuyTokens": 7,
+        "distinctSellTokens": 6,
+        "avgBuySol": 0.10308174125,
+        "medianBuySol": 0.0893260785,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 0.29655777778890396,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 2
+      },
+      "decision": "keep",
+      "score": 90,
+      "suggestedTrust": 0.55,
+      "reasons": [
+        "recent parsed buy activity across multiple tokens"
+      ]
+    },
+    {
+      "candidate": {
+        "address": "PreeKxEtMk2cYajAdmPoiahDm2nayY7CYjgSiZy79WC",
+        "label": "dune_adam_pumpfun_alpha_rank_15",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 15,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 2,
+        "buys": 1,
+        "sells": 1,
+        "distinctBuyTokens": 1,
+        "distinctSellTokens": 1,
+        "avgBuySol": 0.05394306,
+        "medianBuySol": 0.05394306,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 59.149192499981986,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 43,
+      "suggestedTrust": 0,
+      "reasons": []
+    },
+    {
+      "candidate": {
+        "address": "EW2mEVWDFihxaV4q7BYfMYfvUUaXA4zWZJAoBUAV6yGf",
+        "label": "dune_adam_pumpfun_alpha_rank_16",
+        "trust": 0.3,
+        "enabled": true,
+        "rank": 16,
+        "source": "Dune adam_tehc/pump-fun-alpha-wallets visible wallet table",
+        "notes": "Candidate only until vet-wallets passes it. Extracted from supplied Dune dashboard and not trusted until local RPC vetting passes."
+      },
+      "metrics": {
+        "signaturesChecked": 40,
+        "parsedSwaps": 1,
+        "buys": 1,
+        "sells": 0,
+        "distinctBuyTokens": 1,
+        "distinctSellTokens": 0,
+        "avgBuySol": 0.001676234,
+        "medianBuySol": 0.001676234,
+        "zeroishEvents": 0,
+        "zeroishRate": 0,
+        "latestActivityAgeHours": 1610.5697291666932,
+        "sources": [
+          "pumpfun"
+        ],
+        "parseErrors": 0
+      },
+      "decision": "reject",
+      "score": 8,
+      "suggestedTrust": 0,
+      "reasons": [
+        "inactive: latest signature 1610.6h ago",
+        "only one parseable swap in sample",
+        "average buy too small at 0.002 SOL"
+      ]
+    }
+  ]
+}

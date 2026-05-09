@@ -1,0 +1,631 @@
+{
+  "generatedAt": "2026-05-08T19:17:50.087Z",
+  "candidatePath": "/home/thetopham/memecoin-alpha-bot/config/cielo-wallet-candidates.json",
+  "outputPath": "/home/thetopham/memecoin-alpha-bot/data/cielo-wallet-discovery-report.json",
+  "apply": true,
+  "apiKeyConfigured": true,
+  "sources": [
+    {
+      "source": "wallet-discovery:trending",
+      "fetched": 39,
+      "candidates": 0,
+      "skipped": 39,
+      "errors": []
+    },
+    {
+      "source": "api:wallets-by-tag",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": [
+        "human_operated: Cielo request failed (403): Your current plan does not include access to this API endpoint. Upgrade your subscription to access this feature.",
+        "gem_finder: Cielo request failed (403): Your current plan does not include access to this API endpoint. Upgrade your subscription to access this feature.",
+        "high_win_rate: Cielo request failed (403): Your current plan does not include access to this API endpoint. Upgrade your subscription to access this feature.",
+        "popular_wallet: Cielo request failed (403): Your current plan does not include access to this API endpoint. Upgrade your subscription to access this feature."
+      ]
+    },
+    {
+      "source": "app:public-lists",
+      "fetched": 50,
+      "candidates": 5,
+      "skipped": 45,
+      "errors": []
+    },
+    {
+      "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+      "fetched": 5,
+      "candidates": 2,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "fetched": 100,
+      "candidates": 5,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Public List Feed (memecoin traders with high roi)",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Public List Feed (SPL Meme Coin insiders)",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Public List Feed (Small Cap Traders)",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "api/app:trending-pulse-tokens",
+      "fetched": 54,
+      "candidates": 20,
+      "skipped": 0,
+      "errors": [
+        "trending: Cielo request failed (403): Your current plan does not include access to this API endpoint. Upgrade your subscription to access this feature."
+      ]
+    },
+    {
+      "source": "Cielo Trending/Pulse Token Feed batch_1",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Trending/Pulse Token Feed batch_2",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Trending/Pulse Token Feed batch_3",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    },
+    {
+      "source": "Cielo Trending/Pulse Token Feed batch_4",
+      "fetched": 0,
+      "candidates": 0,
+      "skipped": 0,
+      "errors": []
+    }
+  ],
+  "candidates": [
+    {
+      "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
+      "label": "cielo_list_8137_c21r6y",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 62,
+        "sources": [
+          "Cielo Public List Feed (SOYLANA Traders)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 27,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:42.443Z"
+      }
+    },
+    {
+      "address": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+      "label": "cielo_list_8137_4be9cv",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 54,
+        "sources": [
+          "Cielo Public List Feed (SOYLANA Traders)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 3,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:42.442Z"
+      }
+    },
+    {
+      "address": "CNudZYFgpbT26fidsiNrWfHeGTBMMeVWqruZXsEkcUPc",
+      "label": "cielo_list_36875_cnudzy",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 54,
+        "sources": [
+          "Cielo Public List Feed (Solana High Winrate 90%)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 3,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:41.032Z"
+      }
+    },
+    {
+      "address": "2RssnB7hcrnBEx55hXMKT1E7gN27g9ecQFbbCc5Zjajq",
+      "label": "cielo_list_36875_2rssnb",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 50,
+        "sources": [
+          "Cielo Public List Feed (Solana High Winrate 90%)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 2,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:41.032Z"
+      }
+    },
+    {
+      "address": "2XyQF5q5EWdaGCH8ZfLjiVpvbpLXz8D78T9MzUpNEGBL",
+      "label": "cielo_list_8137_2xyqf5",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 50,
+        "sources": [
+          "Cielo Public List Feed (SOYLANA Traders)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 2,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:42.442Z"
+      }
+    },
+    {
+      "address": "CPydqKcEEeKTR6wt3L15G8S5Ea4bxjS2vvjiW9vw1UwK",
+      "label": "cielo_list_8137_cpydqk",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 50,
+        "sources": [
+          "Cielo Public List Feed (SOYLANA Traders)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 2,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:42.442Z"
+      }
+    },
+    {
+      "address": "EMp115dQaDGcMnogrB8FnxBc9XF6AZAq4QJ9wFK5utFB",
+      "label": "cielo_list_8137_emp115",
+      "trust": 0.3,
+      "enabled": true,
+      "source": "Cielo Public List Feed (SOYLANA Traders)",
+      "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+      "cielo": {
+        "score": 50,
+        "sources": [
+          "Cielo Public List Feed (SOYLANA Traders)"
+        ],
+        "reasons": [
+          "observed in Cielo feed; not proof of skill until RPC vetting passes"
+        ],
+        "metrics": {
+          "feedEvents": 2,
+          "distinctTokens": 0,
+          "maxUsd": 0,
+          "totalUsd": 0
+        },
+        "discoveredAt": "2026-05-08T19:17:42.442Z"
+      }
+    }
+  ],
+  "vetting": {
+    "reportPath": "/home/thetopham/memecoin-alpha-bot/data/cielo-wallet-vetting-report.json",
+    "added": 1,
+    "counts": {
+      "keep": 1,
+      "probation": 1,
+      "reject": 5
+    },
+    "results": [
+      {
+        "candidate": {
+          "address": "C21R6y1fqFUNCEzNJgjVcEnjTE2y6Cq7GWLfZzkbBm7a",
+          "label": "cielo_list_8137_c21r6y",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (SOYLANA Traders)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=62/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 62,
+            "sources": [
+              "Cielo Public List Feed (SOYLANA Traders)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 27,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:42.443Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 20,
+          "buys": 10,
+          "sells": 10,
+          "distinctBuyTokens": 9,
+          "distinctSellTokens": 9,
+          "avgBuySol": 2.3590069101,
+          "medianBuySol": 2.499216428,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 12.72605833331744,
+          "sources": [
+            "pumpfun"
+          ],
+          "parseErrors": 0
+        },
+        "decision": "keep",
+        "score": 95,
+        "suggestedTrust": 0.55,
+        "reasons": [
+          "recent parsed buy activity across multiple tokens"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+          "label": "cielo_list_8137_4be9cv",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (SOYLANA Traders)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 54,
+            "sources": [
+              "Cielo Public List Feed (SOYLANA Traders)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 3,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:42.442Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 1,
+          "buys": 1,
+          "sells": 0,
+          "distinctBuyTokens": 1,
+          "distinctSellTokens": 0,
+          "avgBuySol": 1.00000713,
+          "medianBuySol": 1.00000713,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 4.876243055529065,
+          "sources": [
+            "jupiter"
+          ],
+          "parseErrors": 0
+        },
+        "decision": "reject",
+        "score": 43,
+        "suggestedTrust": 0,
+        "reasons": [
+          "only one parseable swap in sample"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "CNudZYFgpbT26fidsiNrWfHeGTBMMeVWqruZXsEkcUPc",
+          "label": "cielo_list_36875_cnudzy",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=54/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 54,
+            "sources": [
+              "Cielo Public List Feed (Solana High Winrate 90%)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 3,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:41.032Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 1,
+          "buys": 0,
+          "sells": 1,
+          "distinctBuyTokens": 0,
+          "distinctSellTokens": 1,
+          "avgBuySol": 0,
+          "medianBuySol": 0,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 15.917707222236528,
+          "sources": [
+            "raydium"
+          ],
+          "parseErrors": 0
+        },
+        "decision": "reject",
+        "score": 20,
+        "suggestedTrust": 0,
+        "reasons": [
+          "only one parseable swap in sample",
+          "no parsed buys in sample"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "2RssnB7hcrnBEx55hXMKT1E7gN27g9ecQFbbCc5Zjajq",
+          "label": "cielo_list_36875_2rssnb",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (Solana High Winrate 90%)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 50,
+            "sources": [
+              "Cielo Public List Feed (Solana High Winrate 90%)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 2,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:41.032Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 0,
+          "buys": 0,
+          "sells": 0,
+          "distinctBuyTokens": 0,
+          "distinctSellTokens": 0,
+          "avgBuySol": 0,
+          "medianBuySol": 0,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 5.427506666647063,
+          "sources": [],
+          "parseErrors": 0
+        },
+        "decision": "reject",
+        "score": 20,
+        "suggestedTrust": 0,
+        "reasons": [
+          "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+          "no parsed buys in sample"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "2XyQF5q5EWdaGCH8ZfLjiVpvbpLXz8D78T9MzUpNEGBL",
+          "label": "cielo_list_8137_2xyqf5",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (SOYLANA Traders)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 50,
+            "sources": [
+              "Cielo Public List Feed (SOYLANA Traders)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 2,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:42.442Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 1,
+          "buys": 1,
+          "sells": 0,
+          "distinctBuyTokens": 1,
+          "distinctSellTokens": 0,
+          "avgBuySol": 1.055479084,
+          "medianBuySol": 1.055479084,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 7.253180277744929,
+          "sources": [
+            "pumpfun"
+          ],
+          "parseErrors": 0
+        },
+        "decision": "reject",
+        "score": 43,
+        "suggestedTrust": 0,
+        "reasons": [
+          "only one parseable swap in sample"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "CPydqKcEEeKTR6wt3L15G8S5Ea4bxjS2vvjiW9vw1UwK",
+          "label": "cielo_list_8137_cpydqk",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (SOYLANA Traders)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 50,
+            "sources": [
+              "Cielo Public List Feed (SOYLANA Traders)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 2,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:42.442Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 2,
+          "buys": 1,
+          "sells": 1,
+          "distinctBuyTokens": 1,
+          "distinctSellTokens": 1,
+          "avgBuySol": 8.087079081,
+          "medianBuySol": 8.087079081,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 5.186718611121178,
+          "sources": [
+            "jupiter",
+            "pumpfun"
+          ],
+          "parseErrors": 0
+        },
+        "decision": "probation",
+        "score": 58,
+        "suggestedTrust": 0.3,
+        "reasons": [
+          "usable but thin sample; watch manually before trusting"
+        ]
+      },
+      {
+        "candidate": {
+          "address": "EMp115dQaDGcMnogrB8FnxBc9XF6AZAq4QJ9wFK5utFB",
+          "label": "cielo_list_8137_emp115",
+          "trust": 0.3,
+          "enabled": true,
+          "source": "Cielo Public List Feed (SOYLANA Traders)",
+          "notes": "Candidate only until vet-wallets passes it. Cielo score=50/100. observed in Cielo feed; not proof of skill until RPC vetting passes",
+          "cielo": {
+            "score": 50,
+            "sources": [
+              "Cielo Public List Feed (SOYLANA Traders)"
+            ],
+            "reasons": [
+              "observed in Cielo feed; not proof of skill until RPC vetting passes"
+            ],
+            "metrics": {
+              "feedEvents": 2,
+              "distinctTokens": 0,
+              "maxUsd": 0,
+              "totalUsd": 0
+            },
+            "discoveredAt": "2026-05-08T19:17:42.442Z"
+          }
+        },
+        "metrics": {
+          "signaturesChecked": 40,
+          "parsedSwaps": 0,
+          "buys": 0,
+          "sells": 0,
+          "distinctBuyTokens": 0,
+          "distinctSellTokens": 0,
+          "avgBuySol": 0,
+          "medianBuySol": 0,
+          "zeroishEvents": 0,
+          "zeroishRate": 0,
+          "latestActivityAgeHours": 6.008345555530654,
+          "sources": [],
+          "parseErrors": 0
+        },
+        "decision": "reject",
+        "score": 20,
+        "suggestedTrust": 0,
+        "reasons": [
+          "no parseable Pump.fun/Raydium/Jupiter/Orca swaps in sample",
+          "no parsed buys in sample"
+        ]
+      }
+    ]
+  }
+}

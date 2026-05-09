@@ -27,6 +27,13 @@ export function formatUsd(value: number | null | undefined): string {
   return `$${value.toFixed(0)}`;
 }
 
+export function formatLiquidity(value: number | null | undefined, marketStage?: string | null): string {
+  if (value == null || !Number.isFinite(value)) return 'DEX liquidity unavailable';
+  if (value <= 0 && marketStage === 'pumpfun_bonding_curve') return 'DEX liquidity unavailable / likely pre-graduation';
+  if (value <= 0) return 'DEX liquidity unavailable / no usable pool';
+  return formatUsd(value);
+}
+
 export function formatPct(value: number | null | undefined): string {
   if (value == null || !Number.isFinite(value)) return 'n/a';
   return `${value.toFixed(1)}%`;

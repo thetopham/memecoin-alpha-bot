@@ -1,0 +1,361 @@
+{
+  "totalVetted": 115,
+  "counts": {
+    "keep": 24,
+    "probation": 16,
+    "reject": 75
+  },
+  "keepCount": 24,
+  "watchedWallets": 43,
+  "keeps": [
+    {
+      "label": "dune_dev2020_solana_alpha_rank_26",
+      "address": "BNnN2MqfWLvgThYBsv6v8JQaYZXYKYahC5YCy27Ct1cX",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 7,
+      "sells": 5,
+      "distinctBuyTokens": 7,
+      "avgBuySol": 1.403069123142857,
+      "latestActivityAgeHours": 0.04001861108673943,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_28",
+      "address": "BfqvqsBXWbD7D9w9SRiKnst6Rhofgtb5Dr4wGprL57Gp",
+      "score": 90,
+      "trust": 0.55,
+      "buys": 27,
+      "sells": 12,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 4.133918095814813,
+      "latestActivityAgeHours": 23.60391222225295,
+      "sources": [
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_33",
+      "address": "12xfu174SRvgp2RFq5M9AvvQnPrDqJQNrPcnWbFd4Phf",
+      "score": 82,
+      "trust": 0.55,
+      "buys": 4,
+      "sells": 6,
+      "distinctBuyTokens": 4,
+      "avgBuySol": 1.793662983,
+      "latestActivityAgeHours": 26.0497819444206,
+      "sources": [
+        "pumpfun",
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_34",
+      "address": "ADXWGeh5jhNSMbt3R1Hnr8R9fi4amAgJyc5oudSWQNJu",
+      "score": 87,
+      "trust": 0.55,
+      "buys": 4,
+      "sells": 6,
+      "distinctBuyTokens": 4,
+      "avgBuySol": 3.286579081,
+      "latestActivityAgeHours": 3.465841944416364,
+      "sources": [
+        "pumpfun",
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_35",
+      "address": "4jSmEmBkuBi1JxZHM1khkf57xPR2oW1EnkRxqehq1cSK",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 12,
+      "sells": 4,
+      "distinctBuyTokens": 10,
+      "avgBuySol": 1.4510185553333335,
+      "latestActivityAgeHours": 0.607246388859219,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_36",
+      "address": "BQm74qyqiUMRBkyxgLV5TRSaerTJqPxKB3Spa4tscPTN",
+      "score": 74,
+      "trust": 0.5,
+      "buys": 3,
+      "sells": 1,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 3.354002606,
+      "latestActivityAgeHours": 1.0578230555852255,
+      "sources": [
+        "pumpfun",
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_40",
+      "address": "FP1CLVYwpxYJAtE3vEyASi54pEPGzcobReJbwRSTUn3P",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 8,
+      "sells": 8,
+      "distinctBuyTokens": 5,
+      "avgBuySol": 49.113835573375,
+      "latestActivityAgeHours": 0.34049611111481987,
+      "sources": [
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_47",
+      "address": "3gXrmvpjxZtPm5erFznwSFPDwsbcMGji3oxsvFBXZJQb",
+      "score": 83,
+      "trust": 0.55,
+      "buys": 6,
+      "sells": 6,
+      "distinctBuyTokens": 2,
+      "avgBuySol": 3.3395244396666666,
+      "latestActivityAgeHours": 3.81595194445716,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_dev2020_solana_alpha_rank_50",
+      "address": "DmFSDGKv5H5Bu2t9C3qYFkKaAcAUyWmf7J34H6wLA5rY",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 14,
+      "sells": 11,
+      "distinctBuyTokens": 11,
+      "avgBuySol": 1.1251697267142857,
+      "latestActivityAgeHours": 6.374318055576748,
+      "sources": [
+        "pumpfun",
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_1",
+      "address": "7QsRjSy9hiWYnEwSaWKjDcV4Zik1VJSCYt89amPsL6gB",
+      "score": 75,
+      "trust": 0.5,
+      "buys": 20,
+      "sells": 0,
+      "distinctBuyTokens": 2,
+      "avgBuySol": 6.402106963999998,
+      "latestActivityAgeHours": 0.3656666666931576,
+      "sources": [
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_2",
+      "address": "6vZdEjUCvAXNcVCyVBUTvZKDVf6ENmnXGS6oe3feoAo4",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 25,
+      "sells": 15,
+      "distinctBuyTokens": 15,
+      "avgBuySol": 1.3581923977599997,
+      "latestActivityAgeHours": 1.729884444475174,
+      "sources": [
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_5",
+      "address": "RDftc8wN9o4tqF9KMfho6YaUrsAVSst3h2n12QtJ4RM",
+      "score": 90,
+      "trust": 0.55,
+      "buys": 11,
+      "sells": 17,
+      "distinctBuyTokens": 9,
+      "avgBuySol": 1.3213049096363636,
+      "latestActivityAgeHours": 48.907707499994174,
+      "sources": [
+        "raydium",
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_8",
+      "address": "2znoHTryV4W8ZqK9rU9Ecy2f6s7EVU6osrifQAryahcJ",
+      "score": 87,
+      "trust": 0.55,
+      "buys": 4,
+      "sells": 6,
+      "distinctBuyTokens": 4,
+      "avgBuySol": 1.05316719775,
+      "latestActivityAgeHours": 0.4158883333206177,
+      "sources": [
+        "jupiter",
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_11",
+      "address": "HPjovxKqpZWHyDJSK6oAJ2TqbNH3QrUgNhWn3WHyu4ip",
+      "score": 74,
+      "trust": 0.5,
+      "buys": 3,
+      "sells": 2,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 1.4014799246666667,
+      "latestActivityAgeHours": 43.90813194447094,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_13",
+      "address": "jcya6XKeSNp26N2bjfoBy8AvFaWV9Ns2YyUhqWZH36F",
+      "score": 87,
+      "trust": 0.55,
+      "buys": 4,
+      "sells": 5,
+      "distinctBuyTokens": 4,
+      "avgBuySol": 5.790259101749999,
+      "latestActivityAgeHours": 2.0584997222158643,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_18",
+      "address": "69TEHviEqXZd2q4njbGnuyFuEAuz4JNCrDGFEehkGs48",
+      "score": 82,
+      "trust": 0.55,
+      "buys": 4,
+      "sells": 7,
+      "distinctBuyTokens": 4,
+      "avgBuySol": 1.40537908,
+      "latestActivityAgeHours": 44.125200555523236,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_19",
+      "address": "71XNkYoJBnTePLPRZkQLQBihr3ReZ5SGPRwTsgdehMza",
+      "score": 77,
+      "trust": 0.5,
+      "buys": 4,
+      "sells": 2,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 1.0242979405,
+      "latestActivityAgeHours": 33.112615000009534,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_21",
+      "address": "57oTC6SmmNe2HwF9HTUzrNjBaEJzEomzp3iCaCbAGKBJ",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 10,
+      "sells": 9,
+      "distinctBuyTokens": 8,
+      "avgBuySol": 2.0014452686,
+      "latestActivityAgeHours": 0.3251633333497577,
+      "sources": [
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_23",
+      "address": "EVCwZrtPFudcjw69RZ9Qogt8dW2HjBp6EiMgv1ujdYuJ",
+      "score": 90,
+      "trust": 0.55,
+      "buys": 13,
+      "sells": 6,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 6.077422169384615,
+      "latestActivityAgeHours": 0.41362472222910984,
+      "sources": [
+        "jupiter"
+      ]
+    },
+    {
+      "label": "dune_couldbebasic_top_trader_rank_24",
+      "address": "7Koj63CwUxq9CNPcSqirteQD8izDqyg7t2uUx2B5Ckv1",
+      "score": 85,
+      "trust": 0.55,
+      "buys": 9,
+      "sells": 5,
+      "distinctBuyTokens": 6,
+      "avgBuySol": 0.9284300987777778,
+      "latestActivityAgeHours": 39.0992386111286,
+      "sources": [
+        "pumpfun",
+        "raydium"
+      ]
+    },
+    {
+      "label": "dune_adam_pumpfun_alpha_rank_2",
+      "address": "7ES7vcS9vPg2ALkuK8d9gEZnhu7j4bYyWKJ3wLXoobrY",
+      "score": 80,
+      "trust": 0.55,
+      "buys": 9,
+      "sells": 6,
+      "distinctBuyTokens": 3,
+      "avgBuySol": 0.14461442455555554,
+      "latestActivityAgeHours": 69.91695305552747,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_adam_pumpfun_alpha_rank_14",
+      "address": "4XnHZZmHwSQ8RszJsdc7snvxG8dZtm6g4hvpkCMkguMx",
+      "score": 90,
+      "trust": 0.55,
+      "buys": 8,
+      "sells": 6,
+      "distinctBuyTokens": 7,
+      "avgBuySol": 0.10308174125,
+      "latestActivityAgeHours": 0.29655777778890396,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_adam_pumpfun_alpha_rank_65",
+      "address": "BTf4A2exGK9BCVDNzy65b9dUzXgMqB4weVkvTMFQsadd",
+      "score": 95,
+      "trust": 0.55,
+      "buys": 13,
+      "sells": 10,
+      "distinctBuyTokens": 8,
+      "avgBuySol": 2.5191659992307693,
+      "latestActivityAgeHours": 4.828366111119588,
+      "sources": [
+        "pumpfun"
+      ]
+    },
+    {
+      "label": "dune_adam_pumpfun_alpha_rank_67",
+      "address": "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+      "score": 90,
+      "trust": 0.55,
+      "buys": 26,
+      "sells": 9,
+      "distinctBuyTokens": 7,
+      "avgBuySol": 0.35692338311538474,
+      "latestActivityAgeHours": 0.03376749998993344,
+      "sources": [
+        "pumpfun"
+      ]
+    }
+  ],
+  "reports": [
+    "data/dune-wallet-vetting-report-batch1.json",
+    "data/dune-wallet-vetting-report-batch2.json",
+    "data/dune-wallet-vetting-report-batch3.json",
+    "data/dune-wallet-vetting-report-batch4.json"
+  ]
+}

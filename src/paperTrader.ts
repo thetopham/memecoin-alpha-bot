@@ -1,8 +1,9 @@
-import type { AppConfig, PaperTrade, TokenScore } from './types';
+import type { AppConfig, ConvergenceSignal, PaperTrade, TokenScore } from './types';
 import type { AlphaDb } from './db';
 import { DexScreenerClient } from './dexScreener';
 import { nowSeconds } from './utils';
 import { Notifier } from './notifier';
+import { estimatePaperExecution } from './fillSimulator';
 
 export class PaperTrader {
   private readonly dex = new DexScreenerClient();
@@ -10,14 +11,25 @@ export class PaperTrader {
 
   constructor(
     private readonly db: AlphaDb,
-    private readonly cfg: Pick<AppConfig, 'maxPaperPositionSol' | 'stopLossPercent' | 'takeProfitMultiples' | 'signalWindowSeconds'>,
+    private readonly cfg: Pick<AppConfig, 'maxPaperPositionSol' | 'paperSolUsdForEstimates' | 'paperComparisonNotionalUsd' | 'stopLossPercent' | 'takeProfitMultiples' | 'signalWindowSeconds'>,
     private readonly notifier: Notifier,
   ) {}
 
-  openFromSignal(tokenAddress: string, score: TokenScore, signalId: number): number | null {
-    const entry = score.snapshot.priceUsd;
-    if (!entry || entry <= 0) return null;
-    return this.db.openPaperTrade(tokenAddress, score.symbol, entry, this.cfg.maxPaperPositionSol, signalId, nowSeconds());
+  openFromSignal(tokenAddress: string, score: TokenScore, signalId: number, signal?: ConvergenceSignal): number | null {
+    const observed = score.snapshot.priceUsd;
+    if (!observed || observed <= 0) return null;
+    const fillAt = nowSeconds();
+    const execution = estimatePaperExecution(score.snapshot, {
+      entrySol: this.cfg.maxPaperPositionSol,
+      referenceSolUsd: this.cfg.paperSolUsdForEstimates,
+      comparisonNotionalUsd: this.cfg.paperComparisonNotionalUsd,
+      signalFirstSeenAt: signal?.firstSeen ?? null,
+      signalLastSeenAt: signal?.lastSeen ?? null,
+      signalCreatedAt: fillAt,
+      fillAt,
+    });
+    const entry = execution.estimatedFillPriceUsd > 0 ? execution.estimatedFillPriceUsd : observed;
+    return this.db.openPaperTrade(tokenAddress, score.symbol, entry, this.cfg.maxPaperPositionSol, signalId, fillAt, execution);
   }
 
   recordTrackedSell(tokenAddress: string, wallet: string, timestamp: number): boolean {
@@ -52,16 +64,23 @@ export class PaperTrader {
     const multiplier = snapshot.priceUsd / trade.entryPriceUsd;
     const pnlPercent = (multiplier - 1) * 100;
     const maxMultiplier = Math.max(trade.maxMultiplier, multiplier);
+    const checkedAt = nowSeconds();
 
     let remaining = trade.remainingPercent;
     const [tp1, tp2, tp3] = this.cfg.takeProfitMultiples;
     if (tp1 && multiplier >= tp1 && remaining > 80) remaining = 80;
     if (tp2 && multiplier >= tp2 && remaining > 50) remaining = 50;
     if (tp3 && multiplier >= tp3 && remaining > 20) remaining = 20;
-    this.db.updateOpenTrade(trade.tokenAddress, maxMultiplier, remaining);
+    this.db.updateOpenTrade(trade.tokenAddress, maxMultiplier, remaining, {
+      priceUsd: snapshot.priceUsd,
+      multiplier,
+      pnlPercent,
+      liquidityUsd: snapshot.liquidityUsd,
+      checkedAt,
+    });
 
     if (pnlPercent <= this.cfg.stopLossPercent) {
-      this.db.closeTrade(trade.tokenAddress, snapshot.priceUsd, nowSeconds(), pnlPercent, `stop loss ${this.cfg.stopLossPercent}%`);
+      this.db.closeTrade(trade.tokenAddress, snapshot.priceUsd, checkedAt, pnlPercent, `stop loss ${this.cfg.stopLossPercent}%`);
       await this.notifier.exit({ ...trade, maxMultiplier }, `stop loss ${this.cfg.stopLossPercent}%`, pnlPercent);
     }
   }
