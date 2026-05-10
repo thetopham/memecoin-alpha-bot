@@ -62,6 +62,8 @@ describe('wallet rotation', () => {
     expect(rotated.wallets.find(w => w.address === wallets[3].address)?.enabled).toBe(false);
     expect(rotated.wallets.find(w => w.address === wallets[3].address)?.tier).toBe('archive');
     expect(rotated.wallets.find(w => w.address === wallets[4].address)?.tier).toBe('candidate');
+    expect(rotated.wallets.find(w => w.address === wallets[0].address)?.trust).toBe(0.5);
+    expect(rotated.wallets.find(w => w.address === wallets[3].address)?.trust).toBe(0.5);
     expect(walletTierCounts(rotated.wallets)).toMatchObject({ hot: 2, probation: 1, candidate: 1, archive: 1 });
     expect(rotated.changes.length).toBeGreaterThanOrEqual(4);
   });

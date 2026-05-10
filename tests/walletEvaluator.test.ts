@@ -126,6 +126,40 @@ describe('classifyWallet', () => {
     expect(result.reasons.join(' ')).toContain('latest parsed swap');
   });
 
+  it('keeps positive-expectancy candidates around a 30% token win rate when followability and breadth are usable', () => {
+    const result = classifyWallet(metrics({
+      roundTripTokens: 6,
+      profitableRoundTripTokens: 2,
+      losingRoundTripTokens: 4,
+      tokenWinRatePercent: 33.3,
+      avgTokenPnlPercent: 12,
+      medianTokenPnlPercent: -4,
+      largestTokenWinPercent: 180,
+      largestTokenLossPercent: -35,
+      pnlOutlierShare: 0.55,
+    }));
+
+    expect(result.decision).toBe('keep');
+    expect(result.reasons.join(' ')).not.toContain('weak token profit distribution');
+  });
+
+  it('does not keep active candidates when local round-trip evidence has negative expectancy', () => {
+    const result = classifyWallet(metrics({
+      roundTripTokens: 6,
+      profitableRoundTripTokens: 3,
+      losingRoundTripTokens: 3,
+      tokenWinRatePercent: 50,
+      avgTokenPnlPercent: -6,
+      medianTokenPnlPercent: -5,
+      largestTokenWinPercent: 30,
+      largestTokenLossPercent: -25,
+      pnlOutlierShare: 0.35,
+    }));
+
+    expect(result.decision).not.toBe('keep');
+    expect(result.reasons.join(' ')).toContain('negative token expectancy');
+  });
+
   it('penalizes PnL distributions dominated by one outlier token', () => {
     const result = classifyWallet(metrics({ pnlOutlierShare: 0.9, roundTripTokens: 5, profitableRoundTripTokens: 4, losingRoundTripTokens: 1 }));
 

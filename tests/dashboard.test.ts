@@ -122,11 +122,18 @@ describe('buildDashboardViewModel', () => {
       db.openPaperTrade(
         'LocalBotToken11111111111111111111111111111111',
         'LOCAL',
-        0.0001,
+        1,
         0.1,
         42,
         1_700_000_000,
       );
+      db.updateOpenTrade('LocalBotToken11111111111111111111111111111111', 2, 80, {
+        priceUsd: 1.5,
+        multiplier: 1.5,
+        pnlPercent: 50,
+        liquidityUsd: 12_000,
+        checkedAt: 1_700_000_060,
+      });
       const beforeUsage = db.apiUsageByProviderSince(0);
 
       const model = buildDashboardViewModel(cfg, db, { refreshSeconds: 15 });
@@ -135,10 +142,13 @@ describe('buildDashboardViewModel', () => {
 
       expect(model.openTrades).toBe(1);
       expect(model.openPositions[0]?.symbol).toBe('LOCAL');
+      expect(model.openPositions[0]?.positionPnlSol).toBeCloseTo(0.06, 6);
       expect(model.opsCrons.map(job => job.jobId)).toEqual(['2b59421d3551', 'f7822adb2503', 'bd525bf8d155']);
       expect(model.dataSourceNote).toContain('does not call Helius');
       expect(model.paperExitRulesText).toContain('trailing 30.0% from peak after 1.50x');
       expect(html).toContain('$LOCAL');
+      expect(html).toContain('Position PnL');
+      expect(html).toContain('+0.060 SOL');
       expect(html).toContain('trailing 30.0% from peak after 1.50x');
       expect(html).toContain('Hermes Ops Automation');
       expect(fetchSpy).not.toHaveBeenCalled();

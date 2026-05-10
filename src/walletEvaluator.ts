@@ -328,12 +328,26 @@ export function classifyWallet(metrics: WalletVetMetrics): Pick<WalletVetResult,
   }
 
   if (metrics.roundTripTokens >= 3) {
-    if (metrics.tokenWinRatePercent != null && metrics.tokenWinRatePercent >= 55 && (metrics.medianTokenPnlPercent ?? -1) >= 0) score += 8;
-    if (metrics.tokenWinRatePercent != null && metrics.tokenWinRatePercent < 35) {
-      score -= 10;
-      reasons.push(`weak token profit distribution: ${metrics.tokenWinRatePercent.toFixed(0)}% round-trip token win rate`);
+    const tokenWinRate = metrics.tokenWinRatePercent;
+    const avgTokenPnl = metrics.avgTokenPnlPercent;
+    const medianTokenPnl = metrics.medianTokenPnlPercent;
+    const positiveExpectancy = avgTokenPnl != null && avgTokenPnl > 0;
+    const sourceWinRateUsable = tokenWinRate != null && tokenWinRate >= 30;
+
+    if (positiveExpectancy && sourceWinRateUsable) {
+      score += avgTokenPnl >= 15 && tokenWinRate >= 35 && (medianTokenPnl ?? -10) >= -5 ? 12 : 8;
+    } else if (avgTokenPnl != null && avgTokenPnl < 0) {
+      score -= 25;
+      reasons.push(`negative token expectancy: ${avgTokenPnl.toFixed(1)}% avg round-trip PnL`);
+    } else if (tokenWinRate != null && tokenWinRate < 25) {
+      score -= 15;
+      reasons.push(`weak token profit distribution: ${tokenWinRate.toFixed(0)}% round-trip token win rate`);
+    } else if (tokenWinRate != null && tokenWinRate < 30) {
+      score -= 8;
+      reasons.push(`token win rate below 30% source bar: ${tokenWinRate.toFixed(0)}%`);
     }
-    if (metrics.pnlOutlierShare >= 0.8) {
+
+    if (metrics.pnlOutlierShare >= 0.75) {
       score -= 25;
       reasons.push(`PnL distribution dominated by one outlier token (${(metrics.pnlOutlierShare * 100).toFixed(0)}% of sampled absolute PnL)`);
     }
@@ -378,11 +392,13 @@ export function classifyWallet(metrics: WalletVetMetrics): Pick<WalletVetResult,
   const fresh = age != null && age <= 72;
   const activeEnoughForProbation = age != null && age <= 168;
   const holdTimeUsable = !tooFastToFollow;
-  const distributionUsable = metrics.roundTripTokens < 3 || metrics.pnlOutlierShare < 0.8;
+  const distributionUsable = metrics.roundTripTokens < 3 || metrics.pnlOutlierShare < 0.75;
+  const tokenExpectancyUsable = metrics.roundTripTokens < 3 || (metrics.avgTokenPnlPercent != null && metrics.avgTokenPnlPercent > 0 && metrics.tokenWinRatePercent != null && metrics.tokenWinRatePercent >= 30);
+  const tokenExpectancyProbation = metrics.roundTripTokens < 3 || (metrics.avgTokenPnlPercent != null && metrics.avgTokenPnlPercent >= 0 && metrics.tokenWinRatePercent != null && metrics.tokenWinRatePercent >= 25);
   const sellSizeUsable = metrics.sells === 0 || metrics.avgSellSol >= 0.01;
   const currentFormUsable = metrics.parsedSwaps < 5 || metrics.recentSwapShare48h >= 0.2 || (swapAge != null && swapAge <= 24);
-  const keep = fresh && metrics.parsedSwaps >= 3 && metrics.buys >= 3 && metrics.distinctBuyTokens >= 2 && metrics.avgBuySol >= 0.03 && sellSizeUsable && holdTimeUsable && distributionUsable && currentFormUsable && metrics.zeroishRate <= 0.5 && score >= 65;
-  const probation = !keep && activeEnoughForProbation && metrics.parsedSwaps >= 2 && metrics.buys >= 1 && metrics.distinctBuyTokens >= 1 && metrics.avgBuySol >= 0.01 && metrics.zeroishRate <= 0.75 && score >= 45;
+  const keep = fresh && metrics.parsedSwaps >= 3 && metrics.buys >= 3 && metrics.distinctBuyTokens >= 2 && metrics.avgBuySol >= 0.03 && sellSizeUsable && holdTimeUsable && distributionUsable && tokenExpectancyUsable && currentFormUsable && metrics.zeroishRate <= 0.5 && score >= 65;
+  const probation = !keep && activeEnoughForProbation && metrics.parsedSwaps >= 2 && metrics.buys >= 1 && metrics.distinctBuyTokens >= 1 && metrics.avgBuySol >= 0.01 && sellSizeUsable && holdTimeUsable && distributionUsable && tokenExpectancyProbation && metrics.zeroishRate <= 0.75 && score >= 45;
 
   let decision: WalletVetDecision = 'reject';
   let suggestedTrust = 0;

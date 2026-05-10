@@ -341,7 +341,8 @@ export class AlphaDb {
         p.estimated_slippage_bps AS estimated_slippage_bps,
         p.latest_wallet_to_fill_seconds AS latest_wallet_to_fill_seconds,
         p.signal_to_fill_seconds AS signal_to_fill_seconds,
-        p.exit_time AS exit_time
+        p.exit_time AS exit_time,
+        p.exit_reason AS exit_reason
       FROM signals s
       LEFT JOIN paper_trades p ON p.signal_id = s.id
       ORDER BY s.id ASC
@@ -383,6 +384,7 @@ function rowToWalletSignalAttribution(row: any): WalletSignalAttributionRow {
     latestWalletToFillSeconds: row.latest_wallet_to_fill_seconds == null ? null : Number(row.latest_wallet_to_fill_seconds),
     signalToFillSeconds: row.signal_to_fill_seconds == null ? null : Number(row.signal_to_fill_seconds),
     exitTime: row.exit_time == null ? null : Number(row.exit_time),
+    exitReason: row.exit_reason ?? null,
   };
 }
 

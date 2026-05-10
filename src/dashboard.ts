@@ -3,7 +3,8 @@ import type { AddressInfo } from 'net';
 import type { AppConfig, PaperTrade, WalletPerformance } from './types';
 import { AlphaDb } from './db';
 import { loadWallets } from './wallets';
-import { formatClosedPositions, formatExitRules, formatOpenPositions, formatPaperPortfolioSummary, formatWalletPerformance, normalizeSignalReasonText } from './reportFormatter';
+import { estimateTradePnlPercent, estimateTradePnlSol, formatClosedPositions, formatExitRules, formatOpenPositions, formatPaperPortfolioSummary, formatWalletPerformance, normalizeSignalReasonText } from './reportFormatter';
+import type { OpenPositionFormatOptions } from './reportFormatter';
 import { nowSeconds, shortAddress } from './utils';
 
 export interface DashboardOpsCron {
@@ -14,6 +15,11 @@ export interface DashboardOpsCron {
   purpose: string;
   behavior: string;
   tone: 'positive' | 'warning' | 'purple' | 'info';
+}
+
+export interface DashboardPaperTrade extends PaperTrade {
+  positionPnlSol?: number | null;
+  positionPnlPercent?: number | null;
 }
 
 export interface DashboardViewModel {
@@ -27,8 +33,8 @@ export interface DashboardViewModel {
   avgPnlPercent: number | null;
   winRate: number | null;
   portfolioText: string;
-  openPositions: PaperTrade[];
-  closedPositions: PaperTrade[];
+  openPositions: DashboardPaperTrade[];
+  closedPositions: DashboardPaperTrade[];
   openPositionsText: string;
   closedPositionsText: string;
   walletPerformance: WalletPerformance[];
@@ -88,7 +94,7 @@ export function buildDashboardViewModel(
   const stats = db.stats();
   const open = db.openTrades();
   const closed = db.closedTrades();
-  const formatOptions = {
+  const formatOptions: OpenPositionFormatOptions = {
     now: nowSeconds(),
     stopLossPercent: cfg.stopLossPercent,
     takeProfitMultiples: cfg.takeProfitMultiples,
@@ -97,6 +103,8 @@ export function buildDashboardViewModel(
   };
 
   const walletPerformance = db.walletPerformance(wallets, 8);
+  const openPositions = withPositionPnl(open, formatOptions);
+  const closedPositions = withPositionPnl(closed, formatOptions);
 
   return {
     generatedAt: formatOptions.now,
@@ -109,8 +117,8 @@ export function buildDashboardViewModel(
     avgPnlPercent: stats.avgPnlPercent,
     winRate: stats.winRate,
     portfolioText: formatPaperPortfolioSummary(open, closed, formatOptions),
-    openPositions: open,
-    closedPositions: closed,
+    openPositions,
+    closedPositions,
     openPositionsText: formatOpenPositions(open, formatOptions),
     closedPositionsText: formatClosedPositions(closed, formatOptions),
     walletPerformance,
@@ -121,6 +129,14 @@ export function buildDashboardViewModel(
     dataSourceNote: DASHBOARD_DATA_SOURCE_NOTE,
     refreshSeconds: options.refreshSeconds,
   };
+}
+
+function withPositionPnl(trades: PaperTrade[], options: OpenPositionFormatOptions): DashboardPaperTrade[] {
+  return trades.map(trade => ({
+    ...trade,
+    positionPnlSol: estimateTradePnlSol(trade, options),
+    positionPnlPercent: estimateTradePnlPercent(trade, options),
+  }));
 }
 
 export async function startDashboardServer(cfg: AppConfig, options: DashboardServerOptions = {}): Promise<http.Server> {
@@ -494,13 +510,15 @@ function renderOpsCronGrid(crons: DashboardOpsCron[]): string {
   </article>`).join('')}</div>`;
 }
 
-function renderTradeGrid(trades: PaperTrade[], kind: 'open' | 'closed'): string {
+function renderTradeGrid(trades: DashboardPaperTrade[], kind: 'open' | 'closed'): string {
   if (trades.length === 0) return `<div class="empty-state">No ${kind} paper trades yet.</div>`;
   return `<div class="trade-grid">${trades.map(trade => renderTradeCard(trade, kind)).join('')}</div>`;
 }
 
-function renderTradeCard(trade: PaperTrade, kind: 'open' | 'closed'): string {
+function renderTradeCard(trade: DashboardPaperTrade, kind: 'open' | 'closed'): string {
   const pnl = trade.status === 'closed' ? trade.pnlPercent ?? null : trade.lastPnlPercent ?? null;
+  const positionPnlSol = positionPnlSolForTrade(trade);
+  const positionPnlText = positionPnlSol == null ? 'n/a' : formatSignedSol(positionPnlSol);
   const pnlText = pnl == null ? 'n/a' : `${formatSigned(pnl)}%`;
   const pnlClassName = sentimentClass(pnl);
   const remaining = clampNumber(trade.remainingPercent, 0, 100);
@@ -521,6 +539,7 @@ function renderTradeCard(trade: PaperTrade, kind: 'open' | 'closed'): string {
     <div class="stat-grid">
       ${stat('Current', trade.lastPriceUsd == null ? 'n/a' : formatUsdPrice(trade.lastPriceUsd), pnlClassName)}
       ${stat('Multiplier', trade.lastMultiplier == null ? 'n/a' : `${trade.lastMultiplier.toFixed(2)}x`, pnlClassName)}
+      ${stat('Position PnL', positionPnlText, sentimentClass(positionPnlSol))}
       ${stat('Liquidity', trade.lastLiquidityUsd == null ? 'n/a' : formatCompactUsd(trade.lastLiquidityUsd), '')}
       ${stat('Entry', formatUsdPrice(trade.entryPriceUsd), '')}
       ${stat('Peak', `${trade.maxMultiplier.toFixed(2)}x`, trade.maxMultiplier >= 2 ? 'positive' : '')}
@@ -625,6 +644,36 @@ function sentimentClass(value: number | null | undefined): string {
 
 function formatSigned(value: number): string {
   return `${value >= 0 ? '+' : ''}${value.toFixed(1)}`;
+}
+
+function formatSignedSol(value: number): string {
+  return `${value >= 0 ? '+' : ''}${value.toFixed(3)} SOL`;
+}
+
+function positionPnlSolForTrade(trade: DashboardPaperTrade): number | null {
+  if (trade.positionPnlSol != null && Number.isFinite(trade.positionPnlSol)) return trade.positionPnlSol;
+  if (trade.positionPnlPercent != null && Number.isFinite(trade.positionPnlPercent) && trade.entrySol > 0) {
+    return trade.entrySol * (trade.positionPnlPercent / 100);
+  }
+
+  const pnlPercent = simplePnlPercentForTrade(trade);
+  if (pnlPercent == null || !Number.isFinite(pnlPercent) || trade.entrySol <= 0) return null;
+  const exposureSol = trade.status === 'closed'
+    ? trade.entrySol
+    : trade.entrySol * (clampNumber(trade.remainingPercent, 0, 100) / 100);
+  return exposureSol * (pnlPercent / 100);
+}
+
+function simplePnlPercentForTrade(trade: PaperTrade): number | null {
+  if (trade.status === 'closed') {
+    if (trade.pnlPercent != null && Number.isFinite(trade.pnlPercent)) return trade.pnlPercent;
+    if (trade.exitPriceUsd != null && trade.entryPriceUsd > 0) return ((trade.exitPriceUsd / trade.entryPriceUsd) - 1) * 100;
+    return null;
+  }
+  if (trade.lastPnlPercent != null && Number.isFinite(trade.lastPnlPercent)) return trade.lastPnlPercent;
+  if (trade.lastMultiplier != null && Number.isFinite(trade.lastMultiplier)) return (trade.lastMultiplier - 1) * 100;
+  if (trade.lastPriceUsd != null && trade.entryPriceUsd > 0) return ((trade.lastPriceUsd / trade.entryPriceUsd) - 1) * 100;
+  return null;
 }
 
 function formatTrust(value: number | null): string {

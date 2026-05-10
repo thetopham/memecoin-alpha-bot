@@ -45,10 +45,7 @@ describe('loadConfig', () => {
   });
 
   it('defaults to Developer-plan polling/budget and paper execution sizing assumptions', () => {
-    delete process.env.POLL_INTERVAL_SECONDS;
-    delete process.env.PAPER_SOL_USD_FOR_ESTIMATES;
-    delete process.env.PAPER_COMPARISON_NOTIONAL_USD;
-    delete process.env.HELIUS_MONTHLY_CREDITS;
+    for (const key of ENV_KEYS) delete process.env[key];
 
     const cfg = loadConfig();
 

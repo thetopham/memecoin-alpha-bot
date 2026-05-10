@@ -31,6 +31,21 @@ function row(overrides: Partial<WalletSignalAttributionRow>): WalletSignalAttrib
   };
 }
 
+function performanceForPnlSeries(pnls: number[], options: { exitReasons?: Array<string | null>; wallet?: WalletConfig } = {}) {
+  const wallet = options.wallet ?? wallets[0];
+  const rows = pnls.map((pnl, idx) => row({
+    signalId: 100 + idx,
+    tradeId: 100 + idx,
+    symbol: `PNL${idx}`,
+    walletsJson: JSON.stringify([{ wallet: wallet.address }]),
+    pnlPercent: pnl,
+    exitTime: 1_700_100_000 + idx,
+    ...(options.exitReasons ? { exitReason: options.exitReasons[idx] ?? null } as any : {}),
+  }));
+  const [perf] = buildWalletPerformance(rows, [wallet], { limit: 10 });
+  return perf;
+}
+
 describe('buildWalletPerformance', () => {
   it('attributes signal/trade outcomes to each participating wallet and recommends trust changes', () => {
     const rows = [
@@ -55,8 +70,8 @@ describe('buildWalletPerformance', () => {
     expect(a.medianPnlPercent).toBeCloseTo(25, 6);
     expect(a.avgSlippageBps).toBeCloseTo(15, 6);
     expect(a.avgLatestWalletToFillSeconds).toBeCloseTo(7, 6);
-    expect(a.recommendation).toBe('promote');
-    expect(a.suggestedTrust).toBeCloseTo(0.6, 6);
+    expect(a.recommendation).toBe('keep');
+    expect(a.suggestedTrust).toBeCloseTo(0.55, 6);
 
     expect(b.recommendation).toBe('probation');
     expect(b.badSignalStreak).toBe(2);
@@ -77,5 +92,35 @@ describe('buildWalletPerformance', () => {
 
     expect(perf.signals).toBe(1);
     expect(perf.paperTrades).toBe(1);
+  });
+
+  it('promotes wallets with 5+ closed trades, positive expectancy, 30%+ win rate, and controlled bad streak', () => {
+    const perf = performanceForPnlSeries([-20, -15, -10, 20, 70]);
+
+    expect(perf.closedTrades).toBe(5);
+    expect(perf.winRatePercent).toBeCloseTo(40, 6);
+    expect(perf.avgPnlPercent).toBeCloseTo(9, 6);
+    expect(perf.badSignalStreak).toBe(0);
+    expect(perf.recommendation).toBe('promote');
+    expect(perf.reason).toContain('positive expectancy');
+  });
+
+  it('demotes wallets with negative average PnL even when the latest trade resets the bad streak', () => {
+    const perf = performanceForPnlSeries([-25, -20, -15, 5, 10]);
+
+    expect(perf.avgPnlPercent).toBeCloseTo(-9, 6);
+    expect(perf.badSignalStreak).toBe(0);
+    expect(perf.recommendation).toBe('demote');
+    expect(perf.reason).toContain('negative expectancy');
+  });
+
+  it('demotes wallets with repeated stop/emergency exits even if average PnL is still positive', () => {
+    const perf = performanceForPnlSeries([-20, -15, -10, 20, 70], {
+      exitReasons: ['stop loss -40%', '2+ tracked wallets sold inside exit window', 'emergency manual exit', null, null],
+    });
+
+    expect(perf.avgPnlPercent).toBeCloseTo(9, 6);
+    expect(perf.recommendation).toBe('demote');
+    expect(perf.reason).toContain('stop/emergency');
   });
 });

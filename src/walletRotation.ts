@@ -54,13 +54,9 @@ export function applyWalletRotation(wallets: WalletConfig[], performance: Wallet
     const previousTier = walletTier(wallet);
     const perf = perfByAddress.get(wallet.address);
     const next: WalletConfig = { ...wallet, tier: previousTier };
-    if (perf?.suggestedTrust != null && Number.isFinite(perf.suggestedTrust)) {
-      next.trust = roundTrust(perf.suggestedTrust);
-    }
     if (perf?.recommendation === 'disable_candidate') {
       next.enabled = false;
       next.tier = 'archive';
-      next.trust = 0;
       next.archivedAt = nowIso;
       next.lastTierChangeAt = nowIso;
       next.notes = appendNote(next.notes, `Archived by wallet rotation: ${perf.reason}`);
@@ -181,12 +177,11 @@ function desiredTierFor(wallet: WalletConfig, perf?: WalletPerformance): WalletT
 
 function walletPriorityScore(wallet: WalletConfig, perf?: WalletPerformance): number {
   const current = walletTier(wallet);
-  const trust = typeof wallet.trust === 'number' && Number.isFinite(wallet.trust) ? wallet.trust : 0.5;
   const tierBoost = current === 'hot' ? 8 : current === 'probation' ? 4 : current === 'candidate' ? 0 : -50;
-  if (!perf) return 45 + trust * 20 + tierBoost;
+  if (!perf) return 45 + tierBoost;
   const recBoost = perf.recommendation === 'promote' ? 20 : perf.recommendation === 'keep' ? 5 : perf.recommendation === 'probation' ? -4 : perf.recommendation === 'demote' ? -12 : -100;
   const sampleBoost = Math.min(10, perf.paperTrades + perf.closedTrades * 2 + perf.passedSignals);
-  return perf.alphaScore + recBoost + sampleBoost + trust * 10 + tierBoost;
+  return perf.alphaScore + recBoost + sampleBoost + tierBoost;
 }
 
 function compareWalletsForFile(a: WalletConfig, b: WalletConfig): number {
@@ -202,8 +197,4 @@ function appendNote(existing: unknown, note: string): string {
 
 function short(address: string): string {
   return `${address.slice(0, 4)}…${address.slice(-4)}`;
-}
-
-function roundTrust(value: number): number {
-  return Math.round(Math.max(0, Math.min(1, value)) * 100) / 100;
 }

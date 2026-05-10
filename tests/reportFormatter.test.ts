@@ -318,7 +318,7 @@ describe('formatWalletPerformance', () => {
     expect(text).toContain('signals: 7 total | 5 passed (71.4%) | trades: 5 paper / 4 closed / 1 open');
     expect(text).toContain('closed PnL: +24.2% avg | +18.5% median | 75.0% win | bad streak 0');
     expect(text).toContain('exec: +14.8 bps avg slip | latest wallet→fill avg 8s');
-    expect(text).toContain('trust: 0.55 → 0.60 suggested | open exposure 0.080 SOL');
+    expect(text).toContain('trust: 0.55 (suggested 0.60, tracked only) | open exposure 0.080 SOL');
     expect(text).toContain('#2 alpha_b wallet...2222 — demote | alpha 22/100');
   });
 

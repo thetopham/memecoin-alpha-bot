@@ -18,6 +18,7 @@ export interface WalletSignalAttributionRow {
   latestWalletToFillSeconds?: number | null;
   signalToFillSeconds?: number | null;
   exitTime?: number | null;
+  exitReason?: string | null;
 }
 
 export interface WalletPerformance {

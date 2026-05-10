@@ -10,6 +10,7 @@ interface WorkingWalletStats {
   closedTradeIds: Set<number>;
   openTradeIds: Set<number>;
   closedPnl: Array<{ pnl: number; exitTime: number }>;
+  adverseExitCount: number;
   slippageBps: number[];
   latestWalletToFillSeconds: number[];
   signalToFillSeconds: number[];
@@ -60,6 +61,7 @@ export function buildWalletPerformance(
           if (row.pnlPercent != null && Number.isFinite(row.pnlPercent)) {
             stats.closedPnl.push({ pnl: Number(row.pnlPercent), exitTime: row.exitTime ?? row.createdAt });
           }
+          if (isAdverseExitReason(row.exitReason)) stats.adverseExitCount += 1;
         }
 
         if (row.tradeStatus === 'open' && !stats.openTradeIds.has(tradeId)) {
@@ -99,6 +101,11 @@ function parseSignalWallets(walletsJson: string): ParsedSignalWallet[] {
   }
 }
 
+function isAdverseExitReason(reason: unknown): boolean {
+  if (typeof reason !== 'string') return false;
+  return /stop loss|tracked wallets sold|emergency/i.test(reason);
+}
+
 function getOrCreateStats(
   byWallet: Map<string, WorkingWalletStats>,
   configured: Map<string, WalletConfig>,
@@ -117,6 +124,7 @@ function getOrCreateStats(
     closedTradeIds: new Set(),
     openTradeIds: new Set(),
     closedPnl: [],
+    adverseExitCount: 0,
     slippageBps: [],
     latestWalletToFillSeconds: [],
     signalToFillSeconds: [],
@@ -140,7 +148,9 @@ function toWalletPerformance(stats: WorkingWalletStats): WalletPerformance {
     closedTrades: stats.closedTradeIds.size,
     winRatePercent,
     avgPnlPercent,
+    medianPnlPercent,
     badSignalStreak,
+    adverseExitCount: stats.adverseExitCount,
     alphaScore,
   });
 
@@ -193,29 +203,72 @@ function calculateAlphaScore(input: {
 
 function recommendWallet(
   currentTrust: number | null,
-  metrics: { closedTrades: number; winRatePercent: number | null; avgPnlPercent: number | null; badSignalStreak: number; alphaScore: number },
+  metrics: {
+    closedTrades: number;
+    winRatePercent: number | null;
+    avgPnlPercent: number | null;
+    medianPnlPercent: number | null;
+    badSignalStreak: number;
+    adverseExitCount: number;
+    alphaScore: number;
+  },
 ): { recommendation: WalletPerformanceRecommendation; suggestedTrust: number | null; reason: string } {
   const trust = currentTrust ?? 0.5;
   const win = metrics.winRatePercent;
   const avg = metrics.avgPnlPercent;
+  const median = metrics.medianPnlPercent;
+  const repeatedAdverseExits = metrics.adverseExitCount >= 2;
   let recommendation: WalletPerformanceRecommendation = 'keep';
   let reason = 'sample usable; keep current trust';
 
   if (metrics.closedTrades < 2) {
     recommendation = 'keep';
     reason = 'thin closed-trade sample; keep observing';
-  } else if (metrics.closedTrades >= 8 && avg != null && avg <= -20 && win != null && win <= 20 && metrics.badSignalStreak >= 4) {
+  } else if (
+    metrics.closedTrades >= 8
+    && avg != null
+    && win != null
+    && avg < 0
+    && win < 25
+    && (metrics.badSignalStreak >= 4 || metrics.adverseExitCount >= 4)
+  ) {
     recommendation = 'disable_candidate';
-    reason = 'persistent closed losses with weak win rate';
-  } else if (avg != null && avg <= -25 && win != null && win <= 25) {
+    reason = 'persistent negative expectancy with weak win rate and repeated losses/adverse exits';
+  } else if (metrics.closedTrades >= 2 && repeatedAdverseExits) {
     recommendation = 'demote';
-    reason = 'closed losses and weak paper win rate';
-  } else if (metrics.badSignalStreak >= 2 || (metrics.closedTrades >= 3 && avg != null && avg < 5)) {
+    reason = 'repeated stop/emergency exits; lower tier until signals improve';
+  } else if (metrics.closedTrades >= 2 && avg != null && avg < 0) {
+    recommendation = 'demote';
+    reason = 'closed losses and negative expectancy across paper trades';
+  } else if (metrics.closedTrades >= 2 && win != null && win < 25) {
+    recommendation = 'demote';
+    reason = 'paper win rate below 25%; demote despite any outlier gains';
+  } else if (metrics.badSignalStreak >= 2) {
     recommendation = 'probation';
-    reason = 'recent closed losses; require better next signals';
-  } else if (metrics.closedTrades >= 3 && avg != null && avg >= 15 && win != null && win >= 60) {
+    reason = 'recent losing streak; require better next signals';
+  } else if (metrics.closedTrades < 5) {
+    recommendation = 'keep';
+    reason = 'positive but thin closed-trade sample; need 5 closed trades before promotion';
+  } else if (avg != null && avg < 8) {
+    recommendation = 'probation';
+    reason = 'positive sample not yet strong enough for promotion';
+  } else if (metrics.closedTrades >= 5 && win != null && win < 30) {
+    recommendation = 'probation';
+    reason = 'paper win rate below 30%; keep observing before promotion';
+  } else if (
+    metrics.closedTrades >= 5
+    && avg != null
+    && avg >= 8
+    && win != null
+    && win >= 30
+    && metrics.badSignalStreak <= 2
+  ) {
     recommendation = 'promote';
-    reason = 'profitable paper attribution with usable sample';
+    if (avg >= 15 && win >= 35 && (median == null || median >= -5)) {
+      reason = 'strong positive expectancy with 35%+ win rate and median PnL near positive';
+    } else {
+      reason = 'positive expectancy with 30%+ win rate and controlled bad streak';
+    }
   }
 
   return { recommendation, suggestedTrust: suggestedTrustFor(recommendation, trust), reason };

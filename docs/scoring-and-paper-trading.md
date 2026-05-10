@@ -544,21 +544,20 @@ Recommendation rules:
 | Condition | Recommendation | Reason |
 | --- | --- | --- |
 | fewer than 2 closed trades | `keep` | thin closed-trade sample; keep observing |
-| at least 8 closed trades, avg PnL <= -20%, win rate <= 20%, bad streak >= 4 | `disable_candidate` | persistent closed losses with weak win rate |
-| avg PnL <= -25% and win rate <= 25% | `demote` | closed losses and weak paper win rate |
-| bad streak >= 2 OR at least 3 closed trades with avg PnL < 5% | `probation` | recent closed losses; require better next signals |
-| at least 3 closed trades, avg PnL >= 15%, win rate >= 60% | `promote` | profitable paper attribution with usable sample |
-| otherwise | `keep` | sample usable; keep current trust |
+| at least 8 closed trades, avg PnL `< 0`, win rate `< 25%`, and bad streak `>= 4` or adverse exits `>= 4` | `disable_candidate` | persistent negative expectancy with weak win rate and repeated losses/adverse exits |
+| at least 2 closed trades and repeated stop/emergency exits `>= 2` | `demote` | repeated adverse exits; lower tier until signals improve |
+| at least 2 closed trades and avg PnL `< 0` | `demote` | closed losses and negative expectancy across paper trades |
+| at least 2 closed trades and win rate `< 25%` | `demote` | paper win rate below 25%; demote despite any outlier gains |
+| bad streak `>= 2` | `probation` | recent losing streak; require better next signals |
+| fewer than 5 closed trades after the demote/probation checks | `keep` | positive but thin sample; need 5 closed trades before promotion |
+| at least 5 closed trades with avg PnL `< +8%` or win rate `< 30%` | `probation` | positive sample is not yet strong enough for promotion |
+| at least 5 closed trades, avg PnL `>= +8%`, win rate `>= 30%`, bad streak `<= 2` | `promote` | positive expectancy with controlled bad streak |
+| promotion case with avg PnL `>= +15%`, win rate `>= 35%`, and median PnL near positive | `promote` | strong positive expectancy |
+| otherwise | `keep` | sample usable; keep current tier |
 
-Suggested trust adjustments:
+Suggested trust is still computed and displayed as a tracked parameter, but wallet rotation does not currently write suggested trust back into `watched-wallets.json` or use trust in tier-ranking math. Trust/weighted-trust should stay observational until it is tuned further.
 
-- `disable_candidate`: 0
-- `demote`: current trust - 0.10, clamped 0.1-1
-- `probation`: current trust - 0.05, clamped 0.1-1
-- `promote`: current trust + 0.05, clamped 0.1-1
-- `keep`: current trust rounded
-
-Wallet rotation uses these recommendations plus tier limits to assign hot/probation/candidate/archive tiers.
+Wallet rotation uses recommendations plus tier limits to assign hot/probation/candidate/archive tiers.
 
 ## Interpretation guidance
 

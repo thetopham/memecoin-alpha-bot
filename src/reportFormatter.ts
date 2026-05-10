@@ -109,7 +109,7 @@ function formatWalletPerformanceRow(wallet: WalletPerformance, rank: number): st
 function formatTrustLine(wallet: WalletPerformance): string {
   const current = wallet.currentTrust == null ? 'n/a' : wallet.currentTrust.toFixed(2);
   const suggested = wallet.suggestedTrust == null ? 'n/a' : wallet.suggestedTrust.toFixed(2);
-  return `${current} → ${suggested} suggested`;
+  return `${current} (suggested ${suggested}, tracked only)`;
 }
 
 export function formatClosedPositions(closed: PaperTrade[], options: OpenPositionFormatOptions, limit = 8): string {
@@ -141,13 +141,13 @@ function formatClosedPosition(trade: PaperTrade, options: OpenPositionFormatOpti
   ].join('\n');
 }
 
-function estimateTradePnlPercent(trade: PaperTrade, options: OpenPositionFormatOptions): number | null {
+export function estimateTradePnlPercent(trade: PaperTrade, options: OpenPositionFormatOptions): number | null {
   const sol = estimateTradePnlSol(trade, options);
   if (!Number.isFinite(sol) || trade.entrySol <= 0) return null;
   return (sol / trade.entrySol) * 100;
 }
 
-function estimateTradePnlSol(trade: PaperTrade, options: OpenPositionFormatOptions): number {
+export function estimateTradePnlSol(trade: PaperTrade, options: OpenPositionFormatOptions): number {
   const takeProfitRealized = estimateTakeProfitPnlSol(trade, options);
   const multiplier = tradeMultiplier(trade);
   if (multiplier == null) return takeProfitRealized;
